@@ -1,4 +1,3 @@
-
 const can = document.getElementById("screen");
 const ctx = can.getContext("2d");
 for (var i = 4; i < can.clientWidth; i += 4) {
