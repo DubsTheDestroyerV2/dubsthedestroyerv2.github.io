@@ -1,4 +1,3 @@
-import "./terminalcss.css";
 
 const can = document.getElementById("screen");
 const ctx = can.getContext("2d");
