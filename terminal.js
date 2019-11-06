@@ -1,6 +1,6 @@
 var can = document.getElementById('screen');
-can.width = document.documentElement.clientWidth;
-can.height = document.documentElement.clientHeight;
+can.width = window.innerWidth + "px";
+can.height = window.innerHeight + "px";
 var ctx = can.getContext('2d');
 var i;
 for (i = 4; i < can.clientWidth; i += 4) {
