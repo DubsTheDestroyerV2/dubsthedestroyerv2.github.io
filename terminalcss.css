@@ -1,8 +1,7 @@
 body, html {
-  left:0;
-  top:0;
   height:100%;
-  position:absolute;
+  margin:0;
+  position:relative;
 }
 .screen {
   width:100%;
