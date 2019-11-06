@@ -1,5 +1,5 @@
-var can = document.querySelector('.overlay');
-can = can.querySelector('.screen');
+var can = document.querySelector(".overlay");
+can = can.querySelector(".screen");
 can.width = window.innerWidth + "px";
 can.height = window.innerHeight + "px";
 var ctx = can.getContext('2d');
