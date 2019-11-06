@@ -7,10 +7,10 @@ for (var i = 4; i < can.clientWidth; i += 4) {
   ctx.moveTo(i, 0);
   ctx.lineTo(i, can.clientHeight);
   ctx.stroke();
-}
+};
 for (var i = 4; i < can.clientHeight; i += 4) {
   ctx.beginPath();
   ctx.moveTo(0, i);
   ctx.lineTo(can.clientWidth, i);
   ctx.stroke();
-}
+};
