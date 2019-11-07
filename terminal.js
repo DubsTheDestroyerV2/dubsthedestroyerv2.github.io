@@ -7,13 +7,13 @@ function makeCRT() {
   var ctx = can.getContext('2d');
   ctx.lineWidth = 1;
   var i;
-  for (i = 4; i < can.clientWidth; i += 8) {
+  for (i = 8; i < can.clientWidth; i += 8) {
     ctx.beginPath();
     ctx.moveTo(i, 0);
     ctx.lineTo(i, can.clientHeight);
     ctx.stroke();
   }
-  for (i = 4; i < can.clientHeight; i += 4) {
+  for (i = 8; i < can.clientHeight; i += 8) {
     ctx.beginPath();
     ctx.moveTo(0, i);
     ctx.lineTo(can.clientWidth, i);
