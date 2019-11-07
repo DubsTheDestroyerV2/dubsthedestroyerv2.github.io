@@ -1,3 +1,4 @@
+alert("If you are prone to epilepsy this site is not for you");
 var can = document.querySelector(".overlay");
 can = can.querySelector(".screen");
 //Pixelation
