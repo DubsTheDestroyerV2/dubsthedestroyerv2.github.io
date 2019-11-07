@@ -27,7 +27,8 @@ makeCRT();
 window.addEventListener("resize", makeCRT);
 //Flicker effect
 var all = document.documentElement;
-var goingDown = true;
+var goingDown = false;
+var opacity = 0;
 function flicker() {
   if(all.style.opacity <= 0.25 && goingDown) {
     goingDown = false;
@@ -39,7 +40,8 @@ function flicker() {
     console.log('switched down at ' + all.style.opacity);
     return;
   }
-  all.style.opacity += 0.05;
-  if(goingDown) all.style.opacity -= 0.1;
+  opacity += 0.05;
+  if(goingDown) opacity -= 0.1;
+  document.style.opacity = opacity;
 }
 setInterval(flicker, 1000);
