@@ -31,10 +31,12 @@ var goingDown = true;
 function flicker() {
   if(all.style.opacity <= 0.25 && goingDown) {
     goingDown = false;
+    console.log('switched up at ' + all.style.opacity);
     return;
   }
   if(all.style.opacity >= 1 && !goingDown) {
     goingDown = true;
+    console.log('switched down at ' + all.style.opacity);
     return;
   }
   all.style.opacity += (goingDown)? -0.01 : 0.01;
