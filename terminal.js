@@ -39,6 +39,6 @@ function flicker() {
     console.log('switched down at ' + all.style.opacity);
     return;
   }
-  all.style.opacity += (goingDown ? -0.01 : 0.01);
+  all.style.opacity += (goingDown ? -0.05 : 0.05);
 }
-setInterval(flicker, 1);
+setInterval(flicker, 12);
