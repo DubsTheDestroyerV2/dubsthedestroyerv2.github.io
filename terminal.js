@@ -41,7 +41,7 @@ function flicker() {
     return;
   }
   opacity += 0.2;
-  if(goingDown) opacity -= 0.3;
+  if(goingDown) opacity -= 0.4;
   document.documentElement.style.opacity = opacity;
 }
 setInterval(flicker, 1);
