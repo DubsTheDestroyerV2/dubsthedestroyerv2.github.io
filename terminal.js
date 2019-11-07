@@ -34,7 +34,7 @@ function flicker() {
     console.log('switched up at ' + all.style.opacity);
     return;
   }
-  if(all.style.opacity >= 1 && !goingDown) {
+  if(all.style.opacity >= 0.9 && !goingDown) {
     goingDown = true;
     console.log('switched down at ' + all.style.opacity);
     return;
