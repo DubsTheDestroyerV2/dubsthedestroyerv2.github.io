@@ -40,6 +40,6 @@ function flicker() {
     return;
   }
   all.style.opacity += 0.05;
-  if(goingDown) all.style.opacity -= 0.05
+  if(goingDown) all.style.opacity -= 1;
 }
 setInterval(flicker, 12);
