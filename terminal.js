@@ -27,7 +27,7 @@ makeCRT();
 window.addEventListener("resize", makeCRT);
 //Flicker effect
 var all = document.documentElement;
-boolean goingDown = true;
+var goingDown = true;
 function flicker() {
   if(all.style.opacity > 0.25 && goingDown) {
     goingDown = false;
