@@ -5,7 +5,7 @@ function makeCRT() {
   can.height = window.innerHeight;
   console.log(can.width + ' vs ' + can.height);
   var ctx = can.getContext('2d');
-  ctx.lineWidth = 0.1;
+  ctx.lineWidth = 0.5;
   var i;
   for (i = 2; i < can.clientWidth; i += 2) {
     ctx.beginPath();
