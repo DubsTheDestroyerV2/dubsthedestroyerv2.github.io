@@ -20,4 +20,4 @@ function makeCRT() {
   }
 }
 makeCRT();
-window.addEventListener("resize", makeCRT());
+window.addEventListener("resize", makeCRT);
