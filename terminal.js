@@ -28,9 +28,9 @@ window.addEventListener("resize", makeCRT);
 var all = document.documentElement;
 function flicker() {
   if(all.style.opacity > 0.25) {
-    all.style.opacity -= 0.05;
+    all.style.opacity -= 0.1;
     return;
   }
-  all.style.opacity += 0.05;
+  all.style.opacity += 0.1;
 }
 setInterval(flicker, 0.001);
