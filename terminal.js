@@ -33,4 +33,4 @@ function flicker() {
   }
   all.style.opacity = 1;
 }
-all.setInterval(flicker, 100);
+setInterval(flicker, 100);
