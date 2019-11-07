@@ -40,8 +40,8 @@ function flicker() {
     console.log('switched down at ' + all.style.opacity);
     return;
   }
-  opacity += 0.05;
-  if(goingDown) opacity -= 0.1;
+  opacity += 0.1;
+  if(goingDown) opacity -= 0.2;
   document.documentElement.style.opacity = opacity;
 }
 setInterval(flicker, 1);
