@@ -44,4 +44,4 @@ function flicker() {
   if(goingDown) opacity -= 0.1;
   document.documentElement.style.opacity = opacity;
 }
-setInterval(flicker, 1000);
+setInterval(flicker, 1);
