@@ -30,14 +30,13 @@ var all = document.documentElement;
 boolean goingDown = true;
 function flicker() {
   if(all.style.opacity > 0.25 && goingDown) {
-    all.style.opacity -= 0.01;
     goingDown = false;
     return;
   }
-  if(all.style.opacity == 1) {
+  if(all.style.opacity >= 1 && !goingDown) {
     goingDown = true;
     return;
   }
-  all.style.opacity += 0.01;
+  all.style.opacity += (goingDown)? -0.01 : 0.01;
 }
 setInterval(flicker, 1);
