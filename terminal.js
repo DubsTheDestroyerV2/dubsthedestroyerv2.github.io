@@ -29,8 +29,11 @@ window.addEventListener("resize", makeCRT);
 var all = document.documentElement;
 var goingDown = false;
 var opacity = 0.5;
+var i = 0;
 function flicker() {
-  all.style.opacity = 0.5 -opacity;
-  opacity = -opacity;
+  opacity -= 0.01;
+  if(opacity < 0.3)
+    opacity = 1;
+  all.style.opacity = opacity;
 }
 setInterval(flicker, 50);
