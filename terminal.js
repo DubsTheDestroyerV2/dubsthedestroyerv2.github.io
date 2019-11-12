@@ -32,7 +32,7 @@ var opacity = 0.5;
 var i = 0;
 function flicker() {
   opacity -= 0.1;
-  if(opacity < 0.3)
+  if(opacity < 0.4)
     opacity = 1;
   all.style.opacity = opacity;
 }
