@@ -36,4 +36,4 @@ function flicker() {
     opacity = 1;
   all.style.opacity = opacity;
 }
-setInterval(flicker, 50);
+setInterval(flicker, 5);
