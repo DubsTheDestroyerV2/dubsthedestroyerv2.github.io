@@ -3,3 +3,7 @@ body, html {
   margin:0;
   position:relative;
 }
+
+.actualContent {
+  background-color: #4AF626;
+}
