@@ -26,7 +26,7 @@ function makeCRT() {
 makeCRT();
 window.addEventListener("resize", makeCRT);
 //Flicker effect
-var all = document.documentElement;
+var all = document.getElementById('light');
 var goingDown = false;
 var opacity = 0.5;
 var i = 0;
