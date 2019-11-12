@@ -1,3 +1,4 @@
+window.onload = function() {
 alert("If you are prone to epilepsy this site is not for you");
 var can = document.querySelector(".overlay");
 can = can.querySelector(".screen");
@@ -37,3 +38,4 @@ function flicker() {
   all.style.opacity = opacity;
 }
 setInterval(flicker, 1);
+}
