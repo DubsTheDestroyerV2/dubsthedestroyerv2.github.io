@@ -41,7 +41,7 @@ window.onload = function() {
   
   var light = document.getElementById('light'); 
   var i = -1;
-  var init = "INIT";
+  var init = "INIT <br />";
   var dot = "[ ...] ";
   var ok = "[<div id=\"green\" class=\"green\"> OK </div>]";
   var first = "Loading Kernel Modules <br />";
