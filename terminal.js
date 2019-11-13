@@ -108,8 +108,8 @@ window.onload = function() {
   }
   setTxt();
   document.addEventListener('keydown', (event) => {
-    input += event.keyDown;
-    var output = console + String.fromCharCode(input);
+    input += String.fromCharCode(event.keyDown);
+    var output = console + input;
     console.log(output);
     light.innerHTML = output;  
   });
