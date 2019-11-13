@@ -3,6 +3,7 @@ body, html {
   margin:0;
   position:relative;
   background-color: #000000;
+  resize: none;
 }
 
 .light {
