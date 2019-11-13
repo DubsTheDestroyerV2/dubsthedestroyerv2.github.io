@@ -46,7 +46,13 @@ window.onload = function() {
   var input = "\>";
   function actualAdventure() {
     var console = "RoveOS [Version 01.0.00000.000]<br/>(c) NASA (Who Would be Lost Without Jack Trevor).  All Rights Reserved (step off Martians) <br />";
-    light.innerHTML = console + input;  
+    light.innerHTML = console.concat(input);  
+    document.addEventListener('keydown', (event) => {
+      input = input.concat(String.fromCharCode(event.keyDown));
+      var output = console.concat(input);
+      console.log(output);
+      light.innerHTML = output;  
+  });
   }
   
   var i = -1;
@@ -107,10 +113,4 @@ window.onload = function() {
     }
   }
   setTxt();
-  document.addEventListener('keydown', (event) => {
-    input = input.concat(String.fromCharCode(event.keyDown));
-    var output = output.concat(input);
-    console.log(output);
-    light.innerHTML = output;  
-  });
 }
