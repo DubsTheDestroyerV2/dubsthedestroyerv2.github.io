@@ -51,9 +51,7 @@ window.onload = function() {
     
     document.addEventListener('keydown', (event) => {
       if(event.keyCode == 8) {
-        if(!rx.test(e.target.tagName) || e.target.disabled || e.target.readOnly ){
-                e.preventDefault();
-        }
+        e.preventDefault();
         if(input.length > 0) {
           input = input.substr(0, input.length - 1);
         }
@@ -63,6 +61,7 @@ window.onload = function() {
     });
     
     document.addEventListener('keypress', (event) => {
+      if(event.keyCode == 8) e.preventDefault();
       input = input.concat(String.fromCharCode(event.keyCode));
       var output = con.concat(input);
       console.log(String.fromCharCode(event.keyCode));
