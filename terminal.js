@@ -56,7 +56,7 @@ window.onload = function() {
           input = input.substr(0, input.length - 1);
         }
       }
-      var output = con.concat(input);
+      var output = con.concat(cmdSign, input);
       light.innerHTML = output;
     });
     
