@@ -21,8 +21,11 @@ div {
 
 .green {
   color: #47F323;
+  padding-left: 10px;
+  /*color: #47F323;*/
 }
 
 .red {
   color: #ff0000;
+  padding-left: 10px;
 }
