@@ -88,9 +88,10 @@ window.onload = function() {
     if(i < 8) {
       if(i %2 == 1) setTimeout(setTxt, 2000);
       else setTimeout(setTxt, 100);
-    }
+    }else {
     setTimeout(() => {bootseq += fifth; light.innerHTML = bootseq;}, 100);
     setTimeout(() => {bootseq += sixth; light.innerHTML = bootseq;}, 200);
+    }
   }
   setTxt();
 }
