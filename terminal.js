@@ -50,6 +50,8 @@ window.onload = function() {
   var second = "Verifying Input Method <br />";
   var third = "Activating Swap <br />";
   var fourth = "Initializing Comms Protocols <br />";
+  var fifth = "Loading Options.ini <br />";
+  var sixth = "Loading Basic OS Functionality <br />";
   var bootseq = "";
   function setTxt() {
     i++;
