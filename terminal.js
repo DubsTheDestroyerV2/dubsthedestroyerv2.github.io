@@ -43,9 +43,9 @@ window.onload = function() {
   var light = document.getElementById('light'); 
   var i = -1;
   var init = "INIT <br />";
-  var dot = "[&nbsp ... &nbsp]&nbsp&nbsp";
-  var ok = "[<div id=\"green\" class=\"green\">&nbspOK&nbsp</div>]&nbsp";
-  var failed = "[<div id=\"red\" class=\"red\">FAIL</div>]";
+  var dot = "[&nbsp ... &nbsp]&nbsp&nbsp&nbsp";
+  var ok = "[<div id=\"green\" class=\"green\">&nbspOK&nbsp</div>]&nbsp&nbsp";
+  var failed = "[<div id=\"red\" class=\"red\">FAIL</div>]&nbsp";
   var first = "Loading Kernel Modules <br />";
   var second = "Verifying Input Method <br />";
   var third = "Activating Swap <br />";
