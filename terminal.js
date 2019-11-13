@@ -51,6 +51,9 @@ window.onload = function() {
     
     document.addEventListener('keydown', (event) => {
       if(event.keyCode == 8) {
+        if(!rx.test(e.target.tagName) || e.target.disabled || e.target.readOnly ){
+                e.preventDefault();
+        }
         if(input.length > 0) {
           input = input.substr(0, input.length - 1);
         }
