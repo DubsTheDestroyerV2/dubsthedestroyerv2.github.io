@@ -43,7 +43,7 @@ window.onload = function() {
 
   
   var light = document.getElementById('light'); 
-  var input = "<br />\>";
+  var input = "\>";
   function actualAdventure() {
     var console = "RoveOS [Version 01.0.00000.000]<br/>(c) NASA (Who Would be Lost Without Jack Trevor).  All Rights Reserved (step off Martians) <br />";
     light.innerHTML = console + input;  
