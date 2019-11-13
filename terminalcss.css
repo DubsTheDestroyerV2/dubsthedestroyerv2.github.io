@@ -10,12 +10,8 @@ div {
   display: inline;
 }
 
-br {
-  margin-left: 30px;
-}
-  
 .light {
-  margin-left: 30px;
+  border-left: 30px;
   margin-top: 20px;
   /*color: #47F323;*/
   color: #ffffff;
