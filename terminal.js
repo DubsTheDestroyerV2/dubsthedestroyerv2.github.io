@@ -109,5 +109,6 @@ window.onload = function() {
   setTxt();
   document.addEventListener('keydown', (event) => {
     input += event.keyDown;
+    light.innerHTML = console + input;  
   });
 }
