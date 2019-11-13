@@ -12,7 +12,7 @@ div {
 
 .light {
   margin-top: 20px;
-  margin-left: 10px;
+  padding-left: 10px;
   /*color: #47F323;*/
   color: #ffffff;
   font-size: 1.75em;
