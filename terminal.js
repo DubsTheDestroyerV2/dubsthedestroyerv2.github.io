@@ -56,5 +56,6 @@ window.onload = function() {
     light.innerHTML = bootseq;
   }
   setTimeout(setTxt, 500);
+  setTimeout(setTxt, 500);
   setTimeout(setTxt, 1000);
 }
