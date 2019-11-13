@@ -43,8 +43,8 @@ window.onload = function() {
   var light = document.getElementById('light'); 
   var i = -1;
   var init = "INIT <br />";
-  var dot = "[  ...  ] ";
-  var ok = "[<div id=\"green\" class=\"green\">  OK </div>]";
+  var dot = "[     ...     ] ";
+  var ok = "[<div id=\"green\" class=\"green\">  OK  </div>]";
   var failed = "[<div id=\"red\" class=\"red\">FAIL</div>]";
   var first = "Loading Kernel Modules <br />";
   var second = "Verifying Input Method <br />";
