@@ -78,7 +78,6 @@ window.onload = function() {
         break;
     }
     light.innerHTML = bootseq;
-    setTimeout(setTxt, 2000);
   }
-
+  setTimeout(setTxt, 2000);
 }
