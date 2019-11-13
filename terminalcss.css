@@ -6,6 +6,8 @@ body, html {
 }
 
 .light {
+  margin-left: 30px;
+  margin-top: 20px;
   color: #47F323;
   font-size: 20px;
   font-style: Ubuntu;
