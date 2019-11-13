@@ -1,3 +1,4 @@
+//Please update
 window.onload = function() {
   alert("If you are prone to epilepsy this site is not for you");
   var can = document.querySelector(".overlay");
