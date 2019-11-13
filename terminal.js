@@ -43,7 +43,7 @@ window.onload = function() {
 
   
   var light = document.getElementById('light'); 
-  var cmdSign = "\>";
+  var cmdSign = "\> ";
   var input = "";
   function actualAdventure() {
     var con = "RoveOS [Version 01.0.00000.000]<br/>(c) NASA (Who Would be Lost Without Jack Trevor).  All Rights Reserved (step off Martians) <br />";
