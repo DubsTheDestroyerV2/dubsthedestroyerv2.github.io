@@ -12,7 +12,7 @@ div {
 
 .light {
   margin-top: 20px;
-  padding-left: 10px;
+  padding-left: 50px;
   /*color: #47F323;*/
   color: #ffffff;
   font-size: 1.75em;
@@ -21,11 +21,8 @@ div {
 
 .green {
   color: #47F323;
-  padding-left: 10px;
-  /*color: #47F323;*/
 }
 
 .red {
   color: #ff0000;
-  padding-left: 10px;
 }
