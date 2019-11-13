@@ -40,7 +40,14 @@ window.onload = function() {
   }
   setInterval(flicker, 1);
   
+
+  
   var light = document.getElementById('light'); 
+  
+  function actualAdventure() {
+    light.innerHTML = "";  
+  }
+  
   var i = -1;
   var init = "INIT <br />";
   var dot = "[&nbsp ... &nbsp]&nbsp&nbsp&nbsp";
@@ -95,6 +102,7 @@ window.onload = function() {
       setTimeout(() => {bootseq += sixth; light.innerHTML = bootseq;}, 200);
       setTimeout(() => {bootseq += seventh; light.innerHTML = bootseq;}, 300);
       setTimeout(() => {bootseq += eigth; light.innerHTML = bootseq;}, 400);
+      setTimeout(actualAdventure, 2000);
     }
   }
   setTxt();
