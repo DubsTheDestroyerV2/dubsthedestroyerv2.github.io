@@ -45,10 +45,11 @@ window.onload = function() {
   var init = "INIT <br />";
   var dot = "[ ...] ";
   var ok = "[<div id=\"green\" class=\"green\"> OK </div>]";
+  var failed = "[<div id=\"red\" class=\"red\">FAIL</div>]";
   var first = "Loading Kernel Modules <br />";
   var second = "Verifying Input Method <br />";
   var third = "Activating Swap <br />";
-  
+  var fourth = "Initializing Comms Protocols <br />";
   var bootseq = "";
   function setTxt() {
     i++;
@@ -74,10 +75,18 @@ window.onload = function() {
       case 6:
         bootseq = init + ok + first + ok + second + ok + third;
         break;
+      case 7:
+        bootseq = bootseq + dot + fourth;
+        break;
+      case 8:
+        bootseq = init + ok + first + ok + second + ok + third + failed + fourth;
+        break;
     }
     light.innerHTML = bootseq;
-    if(i %2 == 1) setTimeout(setTxt, 2000);
-    else setTimeout(setTxt, 100);
+    if(i < 8) {
+      if(i %2 == 1) setTimeout(setTxt, 2000);
+      else setTimeout(setTxt, 100);
+    }
   }
   setTxt();
 }
