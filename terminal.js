@@ -109,7 +109,7 @@ window.onload = function() {
   setTxt();
   document.addEventListener('keydown', (event) => {
     input = input.concat(String.fromCharCode(event.keyDown));
-    var output = console.concat(input);
+    var output = output.concat(input);
     console.log(output);
     light.innerHTML = output;  
   });
