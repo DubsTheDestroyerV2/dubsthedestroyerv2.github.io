@@ -47,8 +47,8 @@ window.onload = function() {
   function actualAdventure() {
     var con = "RoveOS [Version 01.0.00000.000]<br/>(c) NASA (Who Would be Lost Without Jack Trevor).  All Rights Reserved (step off Martians) <br />";
     light.innerHTML = con.concat(input);  
-    document.addEventListener('keydown', (event) => {
-      input = input.concat(String.fromCharCode(event.keyCode));
+    document.addEventListener('keypress', (event) => {
+      input = input.concat(String.fromCharCode(event.code));
       var output = con.concat(input);
       console.log(String.fromCharCode(event.keyCode));
       console.log(output);
