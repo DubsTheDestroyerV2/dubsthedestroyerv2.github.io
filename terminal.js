@@ -52,6 +52,8 @@ window.onload = function() {
   var fourth = "Initializing Comms Protocols <br />";
   var fifth = "Loading Options.ini <br />";
   var sixth = "Loading Basic OS Functionality <br />";
+  var seventh = "Loading Extended OS Functionality <br />";
+  var eigth = "Booting ..."
   var bootseq = "";
   function setTxt() {
     i++;
@@ -89,8 +91,10 @@ window.onload = function() {
       if(i %2 == 1) setTimeout(setTxt, 2000);
       else setTimeout(setTxt, 100);
     }else {
-    setTimeout(() => {bootseq += fifth; light.innerHTML = bootseq;}, 100);
-    setTimeout(() => {bootseq += sixth; light.innerHTML = bootseq;}, 200);
+      setTimeout(() => {bootseq += fifth; light.innerHTML = bootseq;}, 100);
+      setTimeout(() => {bootseq += sixth; light.innerHTML = bootseq;}, 200);
+      setTimeout(() => {bootseq += seventh; light.innerHTML = bootseq;}, 300);
+      setTimeout(() => {bootseq += eigth; light.innerHTML = bootseq;}, 400);
     }
   }
   setTxt();
