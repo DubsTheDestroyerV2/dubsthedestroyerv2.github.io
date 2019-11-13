@@ -54,30 +54,30 @@ window.onload = function() {
     switch(i) {
       case 1:
         bootseq = init + dot + first;
+        setTimeout(setTxt, 2000);
         break;
       case 2:
         bootseq = init + ok + first;
+        setTimeout(setTxt, 2000);
         break;
       case 3:
         bootseq = init + ok + first + dot + second;
+        setTimeout(setTxt, 2000);
         break;
       case 4:
         bootseq = init + ok + first + ok + second;
+        setTimeout(setTxt, 2000);
         break;
       case 5:
         bootseq = init + ok + first + ok + second + dot + third;
+        setTimeout(setTxt, 2000);
         break;
       case 6:
         bootseq = init + ok + first + ok + second + ok + third;
+        setTimeout(setTxt, 2000);
         break;
     }
     light.innerHTML = bootseq;
   }
-  setTimeout(setTxt, 2000);
-  setTimeout(setTxt, 2000);
-  setTimeout(setTxt, 2000);
-  setTimeout(setTxt, 2000);
-  setTimeout(setTxt, 2000);
-  setTimeout(setTxt, 2000);
-  setTimeout(setTxt, 2000);
+
 }
