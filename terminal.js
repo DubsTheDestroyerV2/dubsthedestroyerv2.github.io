@@ -110,6 +110,7 @@ window.onload = function() {
   document.addEventListener('keydown', (event) => {
     input += event.keyDown;
     var output = console + input;
+    console.log(output);
     light.innerHTML = output;  
   });
 }
