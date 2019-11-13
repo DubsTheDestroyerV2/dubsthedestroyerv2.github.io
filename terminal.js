@@ -47,6 +47,10 @@ window.onload = function() {
     i++;
     switch(i) {
       case 1:
+        bootseq += "INIT" + "\n[...] Loading Kernel Modules";
+        break;
+      case 2:
+        bootseq = "INIT" + "\n[<div id="green"> OK </div>] Loading Kernel Modules";
         break;
     }
     light.innerHTML = bootseq;
