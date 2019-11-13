@@ -40,22 +40,42 @@ window.onload = function() {
   setInterval(flicker, 1);
   
   var light = document.getElementById('light'); 
-  var bootseq = "INIT";
   light.innerHTML = bootseq;
   var i = -1;
+  var init = "INIT";
+  var dot = "[ ...] ";
+  var ok = "[<div id=\"green\" class=\"green\"> OK </div>]";
+  var first = "Loading Kernel Modules <br />";
+  var second = "Verifying Input Method <br />";
+  var third = "Activating Swap <br />";
   function setTxt() {
     i++;
     switch(i) {
       case 1:
-        bootseq = "INIT" + "<br />[...] Loading Kernel Modules";
+        bootseq = init + dot + first;
         break;
       case 2:
-        bootseq = "INIT" + "<br />[<div id=\"green\" class=\"green\"> OK </div>] Loading Kernel Modules";
+        bootseq = init + ok + first;
+        break;
+      case 3:
+        bootseq = init + ok + first + dot + second;
+        break;
+      case 4:
+        bootseq = init + ok + first + ok + second;
+        break;
+      case 5:
+        bootseq = init + ok + first + ok + second + dot + third;
+        break;
+      case 6:
+        bootseq = init + ok + first + ok + second + ok + third;
         break;
     }
     light.innerHTML = bootseq;
   }
   setTimeout(setTxt, 500);
   setTimeout(setTxt, 500);
-  setTimeout(setTxt, 1000);
+  setTimeout(setTxt, 2000);
+  setTimeout(setTxt, 2000);
+  setTimeout(setTxt, 2000);
+  setTimeout(setTxt, 2000);
 }
