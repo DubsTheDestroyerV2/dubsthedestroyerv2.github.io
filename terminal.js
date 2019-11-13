@@ -9,7 +9,7 @@ window.onload = function() {
     console.log(can.width + ' vs ' + can.height);
     var ctx = can.getContext('2d');
     ctx.strokeStyle = '#000000';
-    ctx.lineWidth = 0.5;
+    ctx.lineWidth = 0.2;
     var i;
     for (i = 3; i < can.clientWidth; i += 3) {
       ctx.beginPath();
