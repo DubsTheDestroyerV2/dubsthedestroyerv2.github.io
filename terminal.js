@@ -40,7 +40,6 @@ window.onload = function() {
   setInterval(flicker, 1);
   
   var light = document.getElementById('light'); 
-  light.innerHTML = bootseq;
   var i = -1;
   var init = "INIT";
   var dot = "[ ...] ";
@@ -48,6 +47,8 @@ window.onload = function() {
   var first = "Loading Kernel Modules <br />";
   var second = "Verifying Input Method <br />";
   var third = "Activating Swap <br />";
+  
+  var bootseq = "";
   function setTxt() {
     i++;
     switch(i) {
