@@ -52,6 +52,9 @@ window.onload = function() {
   function setTxt() {
     i++;
     switch(i) {
+      case 0:
+        bootseq = init;
+        break;
       case 1:
         bootseq = init + dot + first;
         break;
