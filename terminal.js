@@ -74,10 +74,10 @@ window.onload = function() {
         break;
       case 6:
         bootseq = init + ok + first + ok + second + ok + third;
-        setTimeout(setTxt, 2000);
         break;
     }
     light.innerHTML = bootseq;
+    if(i <= 6) setTimeout(setTxt, 2000);
   }
   setTimeout(setTxt, 2000);
 }
