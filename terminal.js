@@ -48,7 +48,7 @@ window.onload = function() {
   var highlight = 0;
   function actualAdventure() {
     var con = "RoveOS [Version 01.0.00000.000]<br/>(c) NASA (Who Would be Lost Without Jack Trevor).  All Rights Reserved (step off Martians) <br />";
-    light.innerHTML = con.concat(cmdSign, input);  
+    light.innerHTML = con.concat(dir, input);  
     
     document.addEventListener('keydown', (event) => {
       if(event.keyCode == 8) {
