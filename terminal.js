@@ -47,7 +47,7 @@ window.onload = function() {
   var input = "";
   var highlight = 0;
   function actualAdventure() {
-    var con = "RoveOS [Version 01.0.00000.000]<br/>(c) NASA (Who Would be Lost Without Jack Trevor).  All Rights Reserved (step off Martians) <br />";
+    var con = "RoveOS [Version 01.0.00000.000]<br/>(c) NASA (Who Would be Lost Without Jack Trevor).  All Rights Reserved<br />";
     light.innerHTML = con.concat(dir, input);  
     
     document.addEventListener('keydown', (event) => {
@@ -58,6 +58,8 @@ window.onload = function() {
           highlight--;
         }
       }
+      if(event.keyCode == 37) if(highlight > 0) highlight--;
+      if(event.keyCode == 39) if(highlight < input.length) highlight++;
       var output = con.concat(dir, input.substr(0, highlight - 1), "<div id=\"highlighted\" class=\"highlighted\">", input.charAt(highlight), "</div>", input.substr(highlight + 1, input.length));     
       if(highlight >= input.length - 1) {
         output = con.concat(dir, input, "<div id=\"highlighted\" class=\"highlighted\"> &nbsp </div>");     
