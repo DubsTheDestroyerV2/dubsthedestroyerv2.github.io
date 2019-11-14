@@ -34,7 +34,7 @@ window.onload = function() {
   var i = 0;
   function flicker() {
     opacity -= 0.1;
-    if(opacity < 0.4)
+    if(opacity < 0.5)
       opacity = 1;
     all.style.opacity = opacity;
   }
