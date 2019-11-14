@@ -57,7 +57,7 @@ window.onload = function() {
           input = input.substr(0, input.length - 1);
         }
       }
-      var output = con.concat(cmdSign, input);
+      var output = con.concat(dir, input);
       light.innerHTML = output;
     });
     
@@ -65,7 +65,7 @@ window.onload = function() {
       if(event.keyCode == 8) event.preventDefault();
       input = input.substr(0, highlight).concat(String.fromCharCode(event.keyCode), "<div id=\"highlighted\" class=\"highlighted\">", input.charAt(highlighted), "</div>", input.substr(highlight + 1, input.length));
       highlight++;
-      var output = con.concat(cmdSign, input);
+      var output = con.concat(dir, input);
       console.log(String.fromCharCode(event.keyCode));
       console.log(output);
       light.innerHTML = output;  
