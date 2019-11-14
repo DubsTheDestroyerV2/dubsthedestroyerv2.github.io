@@ -44,7 +44,7 @@ window.onload = function() {
   
   var light = document.getElementById('light'); 
   var dir = "C:\> ";
-  var input = " &nbsp";
+  var input = "";
   var highlight = 0;
   function actualAdventure() {
     var con = "RoveOS [Version 01.0.00000.000]<br/>(c) NASA (Who Would be Lost Without Jack Trevor).  All Rights Reserved (step off Martians) <br />";
@@ -66,6 +66,8 @@ window.onload = function() {
       if(event.keyCode == 8) event.preventDefault();
       input = input.replace("<div id=\"highlighted\" class=\"highlighted\">", "");
       input = input.replace("</div>", "");
+      input = input.replace("&nbsp", "");
+      input = input.concat("&nbsp");
       input = input.substr(0, highlight).concat(String.fromCharCode(event.keyCode), "<div id=\"highlighted\" class=\"highlighted\">", input.charAt(highlight), "</div>", input.substr(highlight + 1, input.length));
       highlight++;
       var output = con.concat(dir, input);
