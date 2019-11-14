@@ -65,7 +65,7 @@ window.onload = function() {
     document.addEventListener('keypress', (event) => {
       if(event.keyCode == 8) event.preventDefault();
       highlight++;
-      var output = con.concat(dir, input.substr(0, highlight), "<div id=\"highlighted\" class=\"highlighted\">", input.charAt(highlight), "</div>", input.substr(highlight + 1, input.length);
+      var output = con.concat(dir, input.substr(0, highlight), "<div id=\"highlighted\" class=\"highlighted\">", input.charAt(highlight), "</div>", input.substr(highlight + 1, input.length));
       console.log(String.fromCharCode(event.keyCode));
       console.log(output);
       light.innerHTML = output;  
