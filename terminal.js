@@ -55,6 +55,7 @@ window.onload = function() {
         event.preventDefault();
         if(input.length > 0) {
           input = input.substr(0, input.length - 1);
+          highlight--;
         }
       }
       var output = con.concat(dir, input);
@@ -63,8 +64,8 @@ window.onload = function() {
     
     document.addEventListener('keypress', (event) => {
       if(event.keyCode == 8) event.preventDefault();
-      input.replace("<div id=\"highlighted\" class=\"highlighted\">", "");
-      input.replace("</div>", "");
+      input = input.replace("<div id=\"highlighted\" class=\"highlighted\">", "");
+      input = input.replace("</div>", "");
       input = input.substr(0, highlight).concat(String.fromCharCode(event.keyCode), "<div id=\"highlighted\" class=\"highlighted\">", input.charAt(highlight), "</div>", input.substr(highlight + 1, input.length));
       highlight++;
       var output = con.concat(dir, input);
