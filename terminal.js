@@ -58,7 +58,10 @@ window.onload = function() {
           highlight--;
         }
       }
-      var output = con.concat(dir, input);
+      var output = con.concat(dir, temp.substr(0, highlight - 1), "<div id=\"highlighted\" class=\"highlighted\">", temp.charAt(highlight), "</div>", temp.substr(highlight + 1, input.length));     
+      if(highlight >= input.length - 1) {
+        output = con.concat(dir, temp, "<div id=\"highlighted\" class=\"highlighted\"> &nbsp&nbsp&nbsp </div>");     
+      }
       light.innerHTML = output;
     });
     
@@ -66,10 +69,8 @@ window.onload = function() {
       if(event.keyCode == 8) event.preventDefault();
       highlight++;
       input = input.concat(String.fromCharCode(event.keyCode));
-      var temp = input;
       var output = con.concat(dir, temp.substr(0, highlight - 1), "<div id=\"highlighted\" class=\"highlighted\">", temp.charAt(highlight), "</div>", temp.substr(highlight + 1, input.length));     
       if(highlight >= input.length - 1) {
-        temp.concat(" &nbsp");
         output = con.concat(dir, temp, "<div id=\"highlighted\" class=\"highlighted\"> &nbsp&nbsp&nbsp </div>");     
       }
       console.log(String.fromCharCode(event.keyCode));
