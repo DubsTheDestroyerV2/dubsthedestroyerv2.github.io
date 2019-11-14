@@ -31,3 +31,7 @@ div {
 .highlighted {
   background-color: #4AF626;
 }
+
+.before_last {
+  margin-right: -0.75px;
+}
