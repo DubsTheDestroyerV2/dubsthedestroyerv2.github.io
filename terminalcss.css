@@ -26,3 +26,7 @@ div {
 .red {
   color: #ff0000;
 }
+
+.highlighted {
+  background-color: #4AF626;
+}
