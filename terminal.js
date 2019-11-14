@@ -64,13 +64,8 @@ window.onload = function() {
     
     document.addEventListener('keypress', (event) => {
       if(event.keyCode == 8) event.preventDefault();
-      input = input.replace("<div id=\"highlighted\" class=\"highlighted\">", "");
-      input = input.replace("</div>", "");
-      input = input.replace("&nbsp", "");
-      input = input.concat("&nbsp");
-      input = input.substr(0, highlight).concat(String.fromCharCode(event.keyCode), "<div id=\"highlighted\" class=\"highlighted\">", input.charAt(highlight), "</div>", input.substr(highlight + 1, input.length));
       highlight++;
-      var output = con.concat(dir, input);
+      var output = con.concat(dir, input.substr(0, highlight), "<div id=\"highlighted\" class=\"highlighted\">", input.charAt(highlight), "</div>", input.substr(highlight + 1, input.length);
       console.log(String.fromCharCode(event.keyCode));
       console.log(output);
       light.innerHTML = output;  
