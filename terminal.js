@@ -63,8 +63,8 @@ window.onload = function() {
     
     document.addEventListener('keypress', (event) => {
       if(event.keyCode == 8) event.preventDefault();
-      hightlight += 1;
       input = input.substr(0, highlight).concat(String.fromCharCode(event.keyCode), "<div id=\"highlighted\" class=\"highlighted\">, input.charAt(highlighted), "</div>", input.substr(highlight + 1, input.length));
+      highlight++;
       var output = con.concat(cmdSign, input);
       console.log(String.fromCharCode(event.keyCode));
       console.log(output);
