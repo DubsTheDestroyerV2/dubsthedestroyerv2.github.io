@@ -43,8 +43,9 @@ window.onload = function() {
 
   
   var light = document.getElementById('light'); 
-  var cmdSign = "\> ";
+  var dir = "C:\> ";
   var input = "";
+  var highlight = 0;
   function actualAdventure() {
     var con = "RoveOS [Version 01.0.00000.000]<br/>(c) NASA (Who Would be Lost Without Jack Trevor).  All Rights Reserved (step off Martians) <br />";
     light.innerHTML = con.concat(cmdSign, input);  
@@ -62,7 +63,8 @@ window.onload = function() {
     
     document.addEventListener('keypress', (event) => {
       if(event.keyCode == 8) event.preventDefault();
-      input = input.concat(String.fromCharCode(event.keyCode));
+      hightlight += 1;
+      input = input.substr(0, highlight).concat(String.fromCharCode(event.keyCode), "<div id=\"highlighted\" class=\"highlighted\">, input.charAt(highlighted), "</div>", input.substr(highlight + 1, input.length));
       var output = con.concat(cmdSign, input);
       console.log(String.fromCharCode(event.keyCode));
       console.log(output);
