@@ -60,7 +60,7 @@ window.onload = function() {
       }
       var output = con.concat(dir, input.substr(0, highlight - 1), "<div id=\"highlighted\" class=\"highlighted\">", input.charAt(highlight), "</div>", input.substr(highlight + 1, input.length));     
       if(highlight >= input.length - 1) {
-        output = con.concat(dir, input, "<div id=\"highlighted\" class=\"highlighted\"> &nbsp&nbsp&nbsp </div>");     
+        output = con.concat(dir, input, "<div id=\"highlighted\" class=\"highlighted\"> &nbsp </div>");     
       }
       light.innerHTML = output;
     });
