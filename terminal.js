@@ -66,7 +66,13 @@ window.onload = function() {
       if(event.keyCode == 8) event.preventDefault();
       highlight++;
       input = input.concat(String.fromCharCode(event.keyCode));
-      var temp = input.concat(" &nbsp");
+      var temp = input;
+      var output = con.concat(dir, temp.substr(0, highlight), "<div id=\"highlighted\" class=\"highlighted\">", temp.charAt(highlight), "</div>", temp.substr(highlight + 1, input.length));     
+      if(highlight > input.length) {
+        temp.concat(" &nbsp");
+        con.concat(dir, temp, "<div id=\"highlighted\" class=\"highlighted\"> &nbsp </div>");     
+      }else {
+      }
       var output = con.concat(dir, temp.substr(0, highlight), "<div id=\"highlighted\" class=\"highlighted\">", temp.charAt(highlight), "</div>", temp.substr(highlight + 1, input.length));
       console.log(String.fromCharCode(event.keyCode));
       console.log(output);
