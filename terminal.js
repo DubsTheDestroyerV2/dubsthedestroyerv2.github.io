@@ -43,7 +43,7 @@ window.onload = function() {
 
   
   var light = document.getElementById('light'); 
-  var dir = "C:\> ";
+  var dir = "C:\\\> ";
   var input = "";
   var highlight = 0;
   function actualAdventure() {
