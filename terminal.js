@@ -62,7 +62,7 @@ window.onload = function() {
       if(event.keyCode == 39) if(highlight < input.length) highlight++;
       var output = con.concat(dir, input.substr(0, highlight - 2), "<div id=\"before_last\" class=\"before_last\">", input.charAt(highlight -1), "</div>", "<div id=\"highlighted\" class=\"highlighted\">", input.charAt(highlight), "</div>", input.substr(highlight + 1, input.length));     
       if(highlight >= input.length - 1) {
-        output = con.concat(dir, input, "<div id=\"highlighted\" class=\"highlighted\"> &nbsp </div>");     
+        output = con.concat(dir, input.substr(0, highlight - 2), "<div id=\"before_last\" class=\"before_last\">", input.charAt(highlight -1), "</div>", "<div id=\"highlighted\" class=\"highlighted\"> &nbsp </div>");     
       }
       light.innerHTML = output;
     });
