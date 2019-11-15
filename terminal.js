@@ -54,7 +54,7 @@ window.onload = function() {
       if(event.keyCode == 8) {
         event.preventDefault();
         if(input.length > 0) {
-          input = input.substr(0, highlight).concat(input.substr(highlight + 1, input.length));
+          input = input.substr(0, highlight).concat(input.substr(highlight, input.length));
           highlight--;
         }
       }
