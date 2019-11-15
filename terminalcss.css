@@ -6,6 +6,10 @@ body, html {
   resize: none;
 }
 
+#text {
+    font-style: 'Ubuntu Mono';
+}
+
 div {
   display: inline-block;
 }
@@ -17,7 +21,6 @@ div {
   color: #ffffff;
   font-size: 1.75em;
   /*letter-spacing: 1px;*/
-  font-style: 'Ubuntu Mono';
 }
 
 .green {
