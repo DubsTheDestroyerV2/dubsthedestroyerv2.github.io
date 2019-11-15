@@ -1,7 +1,7 @@
 /* Credit to https://www.fontsquirrel.com/fonts/list/foundry/dalton-maag-ltd for this amazing font */
 @font-face {
-  font-family: 'Ubuntu Mono';
-  src: url('ubuntumono-r-webfont.woff') format('woff');
+  font-family: Ubuntu Mono;
+  src: url(ubuntumono-r-webfont.woff);
 }
 
 body, html {
@@ -13,7 +13,7 @@ body, html {
 }
 
 #text {
-    font-style: 'Ubuntu Mono';
+    font-style: Ubuntu Mono;
 }
 
 div {
