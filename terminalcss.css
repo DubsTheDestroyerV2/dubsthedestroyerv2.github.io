@@ -1,4 +1,8 @@
-@import url(https://fonts.google.com/specimen/Ubuntu+Mono);
+@font-face {
+  font-family: 'Ubuntu Mono';
+  src: url('UbuntuMono-R.ttf');
+}
+
 body, html {
   height:100%;
   margin:0;
