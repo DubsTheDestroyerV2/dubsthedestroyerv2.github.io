@@ -60,9 +60,9 @@ window.onload = function() {
       }
       if(event.keyCode == 37) if(highlight > 0) highlight--;
       if(event.keyCode == 39) if(highlight < input.length) highlight++;
-      var output = con.concat(dir, input.substr(0, highlight - 1), "<div id=\"before_last\" class=\"before_last\">", input.charAt(highlight), "</div>", "<div id=\"highlighted\" class=\"highlighted\">", input.charAt(highlight), "</div>", input.substr(highlight + 1, input.length));     
+      var output = con.concat(dir, input.substr(0, highlight), "<div id=\"highlighted\" class=\"highlighted\">", input.charAt(highlight), "</div>", input.substr(highlight + 1, input.length));     
       if(highlight >= input.length - 1) {
-        output = con.concat(dir, input.substr(0, highlight - 1), "<div id=\"before_last\" class=\"before_last\">", input.charAt(highlight), "</div>", "<div id=\"highlighted\" class=\"highlighted\"> &nbsp </div>");     
+        output = con.concat(dir, input.substr(0, highlight), "<div id=\"highlighted\" class=\"highlighted\"> &nbsp </div>");     
       }
       light.innerHTML = output;
     });
@@ -71,7 +71,7 @@ window.onload = function() {
       if(event.keyCode == 8) event.preventDefault();
       highlight++;
       input = input.concat(String.fromCharCode(event.keyCode));
-      var output = con.concat(dir, input.substr(0, highlight), "<div id=\"before_last\" class=\"before_last\">", input.charAt(highlight), "</div>", "<div id=\"highlighted\" class=\"highlighted\">", input.charAt(highlight), "</div>", input.substr(highlight + 1, input.length));     
+      var output = con.concat(dir, input.substr(0, highlight), "<div id=\"highlighted\" class=\"highlighted\">", input.charAt(highlight), "</div>", input.substr(highlight + 1, input.length));     
       if(highlight >= input.length - 1) {
         output = con.concat(dir, input.substr(0, highlight), "<div id=\"before_last\" class=\"before_last\">", input.charAt(highlight), "</div>", "<div id=\"highlighted\" class=\"highlighted\"> &nbsp </div>");     
       }
@@ -83,9 +83,9 @@ window.onload = function() {
   
   var i = -1;
   var init = "INIT <br />";
-  var dot = "[&nbsp ... &nbsp]&nbsp&nbsp&nbsp";
+  var dot = "[&nbsp...&nbsp]&nbsp&nbsp";
   var ok = "[<div id=\"green\" class=\"green\">&nbspOK&nbsp</div>]&nbsp&nbsp";
-  var failed = "[<div id=\"red\" class=\"red\">FAIL</div>]&nbsp";
+  var failed = "[<div id=\"red\" class=\"red\">FAIL</div>]&nbsp&nbsp";
   var first = "Loading Kernel Modules <br />";
   var second = "Verifying Input Method <br />";
   var third = "Activating Swap <br />";
