@@ -1,8 +1,8 @@
 /* Credit to https://www.fontsquirrel.com/fonts/list/foundry/dalton-maag-ltd for this amazing font */
 @font-face {
-  font-family: Ubuntu Mono;
-  src: url(ubuntumono-r-webfont.woff2) format('woff2'),
-    url(ubuntumono-r-webfont.woff) format('woff');
+  font-family: 'Ubuntu Mono';
+  src: url('ubuntumono-r-webfont.woff2') format('woff2'),
+    url('ubuntumono-r-webfont.woff') format('woff');
 }
 
 body, html {
