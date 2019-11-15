@@ -63,7 +63,7 @@ window.onload = function() {
         }
       }
       if(event.keyCode == 13) {
-        con = con.concat(dir, input, "<br />", dir);
+        con = con.concat(dir, input, "<br />");
         processCmd(input);
         input = "";
       }
