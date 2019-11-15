@@ -50,6 +50,10 @@ window.onload = function() {
     var con = "RoveOS [Version 01.0.00000.000]<br/>(c) NASA (Who Would be Lost Without Jack Trevor).  All Rights Reserved<br />";
     light.innerHTML = con.concat(dir, input);  
     
+    function processCmd(input) {
+      
+    }
+    
     document.addEventListener('keydown', (event) => {
       if(event.keyCode == 8) {
         event.preventDefault();
@@ -57,6 +61,11 @@ window.onload = function() {
           input = input.substr(0, highlight-1).concat(input.substr(highlight, input.length));
           highlight--;
         }
+      }
+      if(event.keyCode == 13) {
+        con = con.concat(dir, input, "<br />", dir);
+        processCmd(input);
+        input = "";
       }
       if(event.keyCode == 37) if(highlight > 0) highlight--;
       if(event.keyCode == 39) if(highlight < input.length) highlight++;
