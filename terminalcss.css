@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Ubuntu Mono';
-  src: url('UbuntuMono-R.ttf');
+  src: url('UbuntuMono-R.ttf') format('ttf');
 }
 
 body, html {
