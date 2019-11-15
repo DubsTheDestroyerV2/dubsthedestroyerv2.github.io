@@ -13,10 +13,6 @@ body, html {
   resize: none;
 }
 
-#text {
-    font-style: 'ubuntumono';
-}
-
 div {
   display: inline-block;
 }
@@ -27,6 +23,7 @@ div {
   /*color: #47F323;*/
   color: #ffffff;
   font-size: 1.75em;
+  font-style: 'ubuntumono';
   /*letter-spacing: 1px;*/
 }
 
