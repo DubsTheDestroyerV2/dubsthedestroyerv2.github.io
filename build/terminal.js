@@ -43,7 +43,7 @@ window.onload = function() {
   function node(folder, val) {
 	this.folder = folder;
 	this.val = val;
-	this.addNode(node) {
+	this.addNode = function (node) {
 		node.owner = this;
 		this.inside.push_back(node);
 	}
