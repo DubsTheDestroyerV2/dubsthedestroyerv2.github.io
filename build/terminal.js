@@ -46,7 +46,7 @@ window.onload = function() {
 	this.inside = [];
 	this.addNode = function (node) {
 		node.owner = this;
-		this.inside.push_back(node);
+		this.inside.push(node);
 	}
   }
   
