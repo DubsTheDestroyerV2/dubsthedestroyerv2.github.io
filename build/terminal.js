@@ -82,6 +82,10 @@ window.onload = function() {
 		
 		if(isLs) {
 			console.log('heard');
+			if(curr.inside == null) {
+				con = con.concat("<br />");
+				return;
+			}
 			for(var i = 0; i < curr.inside.length; i++) {
 				console.log(curr.inside[i].val);
 				con = con.concat((curr.inside[i].folder) ? "Folder - " : "File - &nbsp &nbsp &nbsp ", "&nbsp &nbsp&nbsp&nbsp", curr.inside[i].val, "<br />");
