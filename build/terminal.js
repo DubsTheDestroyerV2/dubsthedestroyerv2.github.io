@@ -62,9 +62,8 @@ window.onload = function() {
 	var cdrive = new node(true, "C");
 	cdrive.addNode(new node(true, "folder"));
 	var curr = cdrive;
- 
-    light.innerHTML = con.concat(strt, dir, end, input);  
-    
+ 	update();
+	  
 	function update() {
 	  var output = con.concat(strt, dir, end, input.substr(0, highlight), "<div id=\"highlighted\" class=\"highlighted\">", input.charAt(highlight), "</div>", input.substr(highlight + 1, input.length));     
       if(highlight >= input.length - 1) {
