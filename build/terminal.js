@@ -105,8 +105,6 @@ window.onload = function() {
 				if(words[1].trim() === curr.inside[i].val.trim() && curr.inside[i].folder == true) {
 					curr = curr.inside[i];
 					console.log(String(curr.val));
-					if(strt.length > 2) 
-						strt = strt.substr(0, 2);
 					dir = dir.concat(String(curr.val), "\\");
 					con = con.concat("<br />");
 					found = true;
