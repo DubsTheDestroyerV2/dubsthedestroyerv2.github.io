@@ -119,7 +119,7 @@ window.onload = function() {
 		event.preventDefault();
 		for(var i = 2; i < input.length; i++) {
 			for(var i2 = 1; i2 < curr.inside.length; i2++) {
-				if(curr.inside[i2].val.trim().startsWith(input.substr(i).trim())) {
+				if(curr.inside[i2].val.trim().startsWith(input.substr(input.length - i).trim())) {
 					input = input.concat(curr.inside[i2].val.substr(i, curr.inside[i2].val.length));
 				}
 			}
