@@ -59,7 +59,7 @@ window.onload = function() {
   var con = "RoveOS [Version 01.0.00000.000]<br/>(c) NASA (Who Would be Lost Without Jack Trevor).  All Rights Reserved<br /> <br />";
   function actualAdventure() {
 	var cdrive = new node(true, "C", null);
-	cdrive.addNode(new node(true, "folder", null);
+	cdrive.addNode(new node(true, "folder", null));
 	var curr = cdrive;
  
     light.innerHTML = con.concat(strt, dir, end, input);  
