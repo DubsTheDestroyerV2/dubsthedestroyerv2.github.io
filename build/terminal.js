@@ -40,10 +40,11 @@ window.onload = function() {
   }
   setInterval(flicker, 1);
   
-  function node(folder, inside, val) {
+  function node(folder, inside, val, owner) {
 	this.folder = folder;
 	this.inside = inside;
 	this.val = val;
+	this.owner = owner;
   }
   
   
@@ -55,7 +56,7 @@ window.onload = function() {
   var highlight = 0;
   var con = "RoveOS [Version 01.0.00000.000]<br/>(c) NASA (Who Would be Lost Without Jack Trevor).  All Rights Reserved<br /> <br />";
   function actualAdventure() {
-	var cdrive = new node(true, [new node(false, "folder", "hello world"), new node(true, [new node(false, "meme", "bet ya didnt expect this huh")], "folder")], "C");
+	var cdrive = new node(true, [new node(false, "folder", "hello world", cdrive), new node(true, [new node(false, "meme", "bet ya didnt expect this huh", cdrive)], "folder")], "C", null);
 	var curr = cdrive;
  
     light.innerHTML = con.concat(strt, dir, end, input);  
