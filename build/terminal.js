@@ -81,23 +81,22 @@ window.onload = function() {
 			console.log('heard');
 			for(var i = 0; i < curr.inside.length; i++) {
 				console.log(curr.inside[i].val);
-				con = con.concat("&nbsp &nbsp &nbsp &nbsp", (curr.inside[i].folder) ? "Folder - " : "File - ", "&nbsp&nbsp", curr.inside[i].val, "<br />");
+				con = con.concat((curr.inside[i].folder) ? "Folder - " : "File - ", "&nbsp &nbsp &nbsp &nbsp&nbsp&nbsp", curr.inside[i].val, "<br />");
 			}
 		}
 		if(isCd) {
 			console.log("cd");
 			var words = something.split(' ');
 			var found = false;
-			if(words[1].trim() === "..") {
-				try {
-					curr = curr.owner;
-					dir.substr(0, dir.split('\\').length - 1);
-					return;
-				}catch(error){
+			if(words[1].trim() == "..") {
+				console.log("functioniong");
+				if(curr.owner == null) {
 					con = con.concat("Not a valid Directory");
 					con = con.concat("<br />");
-					return;
 				}
+				curr = curr.owner;
+				dir = dir.substr(0, dirr.split('\\')[dir.split('\\').length - 1].length);
+				return;
 			}
 			for(var i = 0; i < curr.inside.length; i++) {
 				if(words[1].trim() === curr.inside[i].val.trim() && curr.inside[i].folder == true) {
