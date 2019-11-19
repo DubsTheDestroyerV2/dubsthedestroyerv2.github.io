@@ -107,7 +107,7 @@ window.onload = function() {
 					console.log(String(curr.val));
 					if(strt.length > 2) 
 						strt = strt.substr(0, 2);
-					dir = dir.concat("\\", String(curr.val));
+					dir = dir.concat(String(curr.val), "\\");
 					con = con.concat("<br />");
 					found = true;
 					break;
