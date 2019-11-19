@@ -40,11 +40,13 @@ window.onload = function() {
   }
   setInterval(flicker, 1);
   
-  function node(folder, inside, val, owner) {
+  function node(folder, val) {
 	this.folder = folder;
-	this.inside = inside;
 	this.val = val;
-	this.owner = owner;
+	function addNode(node) {
+		node.owner = this;
+		this.inside.push_back(node);
+	}
   }
   
   
@@ -56,7 +58,8 @@ window.onload = function() {
   var highlight = 0;
   var con = "RoveOS [Version 01.0.00000.000]<br/>(c) NASA (Who Would be Lost Without Jack Trevor).  All Rights Reserved<br /> <br />";
   function actualAdventure() {
-	var cdrive = new node(true, [new node(false, "folder", "hello world", cdrive), new node(true, [new node(false, "meme", "bet ya didnt expect this huh", cdrive)], "folder")], "C", null);
+	var cdrive = new node(true, "C", null);
+	cdrive.addNode(new node(true, "folder", null);
 	var curr = cdrive;
  
     light.innerHTML = con.concat(strt, dir, end, input);  
@@ -81,7 +84,7 @@ window.onload = function() {
 			console.log('heard');
 			for(var i = 0; i < curr.inside.length; i++) {
 				console.log(curr.inside[i].val);
-				con = con.concat((curr.inside[i].folder) ? "Folder - " : "File - ", "&nbsp &nbsp &nbsp &nbsp&nbsp&nbsp", curr.inside[i].val, "<br />");
+				con = con.concat((curr.inside[i].folder) ? "Folder - " : "File - &nbsp &nbsp ", "&nbsp &nbsp&nbsp&nbsp", curr.inside[i].val, "<br />");
 			}
 		}
 		if(isCd) {
