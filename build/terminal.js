@@ -80,7 +80,7 @@ window.onload = function() {
 			console.log('heard');
 			for(var i = 0; i < curr.inside.length; i++) {
 				console.log(curr.inside[i].val);
-				con = con.concat("&nbsp &nbsp &nbsp &nbsp", curr.inside[i].val, "<br />");
+				con = con.concat("&nbsp &nbsp &nbsp &nbsp", (curr.inside[i].folder) ? "Folder - " : "File - ", "&nbsp&nbsp", curr.inside[i].val, "<br />");
 			}
 		}
 		if(isCd) {
