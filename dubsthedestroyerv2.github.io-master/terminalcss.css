@@ -1,0 +1,52 @@
+/* Credit to https://www.fontsquirrel.com/fonts/list/foundry/dalton-maag-ltd for this amazing font */
+@font-face {
+  font-family: 'ubuntumono';
+  src: url('ubuntumono-r-webfont.woff2') format('woff2'),
+    url('ubuntumono-r-webfont.woff') format('woff');
+}
+
+body, html {
+  height:100%;
+  margin:0;
+  position:relative;
+  background-color: #000000;
+  resize: none;
+}
+
+div {
+  display: inline-block;
+}
+
+.light {
+  /*margin-top: 20px;
+  padding-left: 50px;*/
+  /*color: #47F323;*/
+  color: #ffffff;
+  font-size: 1.5em;
+  overflow: hidden;
+  overflow-wrap: break-word;
+  font-family: 'ubuntumono';
+  line-height: 1.5em;
+  padding-left: 4vw;
+  margin-top: 5vh;
+  width: 91vw;
+  height: 87vh;
+  /*letter-spacing: 1px;*/
+}
+
+.green {
+  color: #47F323;
+}
+
+.red {
+  color: #ff0000;
+}
+
+.highlighted {
+  background-color: #4AF626;
+  margin-left: 1px;
+}
+
+.before_last {
+  margin-right: -1px;
+}
