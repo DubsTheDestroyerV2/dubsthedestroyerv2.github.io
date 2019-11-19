@@ -88,6 +88,17 @@ window.onload = function() {
 			console.log("cd");
 			var words = something.split(' ');
 			var found = false;
+			if(words[1].trim() === "..") {
+				try {
+					curr = curr.owner;
+					dir.substr(0, dir.split('\\').length - 1);
+					return;
+				}catch(error){
+					con = con.concat("Not a valid Directory");
+					con = con.concat("<br />");
+					return;
+				}
+			}
 			for(var i = 0; i < curr.inside.length; i++) {
 				if(words[1].trim() === curr.inside[i].val.trim() && curr.inside[i].folder == true) {
 					curr = curr.inside[i];
