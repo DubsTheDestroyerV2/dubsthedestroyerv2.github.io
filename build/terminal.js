@@ -122,7 +122,7 @@ window.onload = function() {
 		for(var i = starr.length-1; i > -1; i--) {
 			currPath = currPath.concat(starr[i]);
 			for(var i2 = 0; i2 < curr.inside.length; i2++) {
-				if(curr.inside[i2].val.startsWith(currPath.length)) {
+				if(curr.inside[i2].val.trim().startsWith(currPath.trim())) {
 					input = input.concat(curr.inside[i2].val.substr(currPath.length));   
 					update();
 					return;
