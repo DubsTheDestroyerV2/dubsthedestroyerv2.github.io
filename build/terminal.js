@@ -98,7 +98,7 @@ window.onload = function() {
 					con = con.concat("<br />");
 				}
 				curr = curr.owner;
-				dir = dir.substr(0, dir.length - dir.split('\\')[dir.split('\\').length - 2].length).concat("\\");
+				dir = dir.substr(0, dir.length - dir.split('\\')[dir.split('\\').length].length).concat("\\");
 				return;
 			}
 			for(var i = 0; i < curr.inside.length; i++) {
