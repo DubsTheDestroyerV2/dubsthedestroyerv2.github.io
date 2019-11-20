@@ -82,7 +82,7 @@ window.onload = function() {
 		
 	    	if(isCat) {
 			for(var i = 0; i < curr.inside.length; i++) {
-				if(words.substr(words.indexOf('cat ') + 4).trim() === curr.inside[i].val.trim() && curr.inside[i].folder == true) {
+				if(words.substr(words.indexOf('cat ') + 4).trim() === curr.inside[i].val.trim() && curr.inside[i].folder == false) {
 					curr = curr.inside[i];
 					console.log(String(curr.val));
 					dir = dir.concat(String(curr.val), "\\");
@@ -121,7 +121,7 @@ window.onload = function() {
 				return;
 			}
 			for(var i = 0; i < curr.inside.length; i++) {
-				if(words.substr(words.indexOf('cd ') + 3).trim() === curr.inside[i].val.trim() && curr.inside[i].folder == true) {
+				if(words.substr(words.indexOf('cd ') + 3).trim() == curr.inside[i].val.trim() && curr.inside[i].folder == true) {
 					curr = curr.inside[i];
 					console.log(String(curr.val));
 					dir = dir.concat(String(curr.val), "\\");
