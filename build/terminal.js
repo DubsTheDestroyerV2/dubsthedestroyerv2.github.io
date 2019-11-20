@@ -111,7 +111,7 @@ window.onload = function() {
 			}
 			for(var i = 0; i < curr.inside.length; i++) {
 				console.log(curr.inside[i].val);
-				con = con.concat((curr.inside[i].folder) ? "Folder - " : "File - &nbsp &nbsp &nbsp ", "&nbsp &nbsp&nbsp&nbsp", curr.inside[i].val, "<br />");
+				con = con.concat((curr.inside[i].folder) ? "<div id=\"green\"> " : "<div id=\"blue\"> ", curr.inside[i].val, "</div><br />");
 			}
 		}
 		else if(isCd) {
