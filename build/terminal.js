@@ -88,9 +88,11 @@ window.onload = function() {
 		console.log('it is - ' + something + '\n' + isLs + ' vs ' +  isCd);
 		
 	    	if(isCat) {
+			var found = false;
 			for(var i = 0; i < curr.inside.length; i++) {
 				if(something.substr(4).trim() == curr.inside[i].val.trim() && curr.inside[i].folder == false) {
 					con = con.concat(curr.inside[i].inside, "<br />");
+					found = true;
 					break;
 				}
 			}
