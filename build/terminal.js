@@ -66,7 +66,7 @@ window.onload = function() {
   var con = "RoveOS [Version 01.0.00000.000]<br/>(c) NASA (Who Would be Lost Without Jack Trevor).  All Rights Reserved<br /> <br />";
   function actualAdventure() {
 	var cdrive = new dnode("C");
-	cdrive.addNode(new fnode("folder"));
+	cdrive.addNode(new dnode("folder"));
 	cdrive.addNode(new fnode("depression.txt", "hello there"));
 	var curr = cdrive;
  	update();
@@ -103,7 +103,7 @@ window.onload = function() {
 			}
 		}
 	    	
-		if(isLs) {
+		else if(isLs) {
 			console.log('heard');
 			if(curr.inside == null) {
 				con = con.concat("<br />");
@@ -114,7 +114,7 @@ window.onload = function() {
 				con = con.concat((curr.inside[i].folder) ? "Folder - " : "File - &nbsp &nbsp &nbsp ", "&nbsp &nbsp&nbsp&nbsp", curr.inside[i].val, "<br />");
 			}
 		}
-		if(isCd) {
+		else if(isCd) {
 			console.log("cd");
 			var words = something.split(' ');
 			var found = false;
@@ -141,6 +141,9 @@ window.onload = function() {
 			if(!found) {
 				con = con.concat("Not a valid Directory");
 			}
+		}
+	    	else {
+			con.concat("Unrecognized Command.  Use \"help\" to get a list of common commands <br />");
 		}
 	}
     document.addEventListener('keydown', (event) => {
