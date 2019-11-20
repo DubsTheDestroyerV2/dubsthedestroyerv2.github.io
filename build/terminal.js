@@ -99,7 +99,6 @@ window.onload = function() {
 				console.log("functioniong");
 				if(curr.owner == null) {
 					con = con.concat("Not a valid Directory");
-					con = con.concat("<br />");
 					return;
 				}
 				curr = curr.owner;
@@ -112,14 +111,12 @@ window.onload = function() {
 					curr = curr.inside[i];
 					console.log(String(curr.val));
 					dir = dir.concat(String(curr.val), "\\");
-					con = con.concat("<br />");
 					found = true;
 					break;
 				}
 			}
 			if(!found) {
 				con = con.concat("Not a valid Directory");
-				con = con.concat("<br />");
 			}
 		}
 	}
