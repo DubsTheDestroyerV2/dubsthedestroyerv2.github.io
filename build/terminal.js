@@ -103,7 +103,6 @@ window.onload = function() {
 				}
 				curr = curr.owner;
 				dir = dir.substr(0, dir.length - dir.split('\\')[dir.split('\\').length - 2].length - 1);
-				con = con.concat("<br />");
 				return;
 			}
 			for(var i = 0; i < curr.inside.length; i++) {
