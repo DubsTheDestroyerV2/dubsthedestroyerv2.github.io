@@ -143,7 +143,7 @@ window.onload = function() {
 			}
 		}
 	    	else {
-			con.concat("Unrecognized Command.  Use \"help\" to get a list of common commands <br />");
+			con = con.concat("Unrecognized Command.  Use \"help\" to get a list of common commands <br />");
 		}
 	}
     document.addEventListener('keydown', (event) => {
