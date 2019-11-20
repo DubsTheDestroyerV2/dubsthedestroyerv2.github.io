@@ -53,10 +53,6 @@ window.onload = function() {
   	this.val = val;
 	this.inside = inside;
 	this.folder = false;
-	this.addNode = function (node) {
-		node.owner = this;
-		this.inside.push(node);
-	}
   }
   
   
