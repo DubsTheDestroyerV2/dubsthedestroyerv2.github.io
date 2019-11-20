@@ -40,7 +40,7 @@ window.onload = function() {
   }
   setInterval(flicker, 1);
   
-  function node(name) {
+  function dnode(name) {
 	this.folder = true;
 	this.val = name;
 	this.inside = [];
@@ -49,7 +49,7 @@ window.onload = function() {
 		this.inside.push(node);
 	}
   }
-  function node(val, inside) {
+  function fnode(val, inside) {
   	this.val = val;
 	this.inside = inside;
 	this.folder = false;
@@ -65,9 +65,9 @@ window.onload = function() {
   var highlight = 0;
   var con = "RoveOS [Version 01.0.00000.000]<br/>(c) NASA (Who Would be Lost Without Jack Trevor).  All Rights Reserved<br /> <br />";
   function actualAdventure() {
-	var cdrive = new node("C");
-	cdrive.addNode(new node("folder"));
-	cdrive.addNode(new node("depression.txt", "hello there"));
+	var cdrive = new fnode("C");
+	cdrive.addNode(new fnode("folder"));
+	cdrive.addNode(new dnode("depression.txt", "hello there"));
 	var curr = cdrive;
  	update();
 	  
