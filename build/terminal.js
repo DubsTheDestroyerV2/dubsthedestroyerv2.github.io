@@ -82,7 +82,7 @@ window.onload = function() {
 		
 	    	if(isCat) {
 			for(var i = 0; i < curr.inside.length; i++) {
-				if(words.substr(4).trim() == curr.inside[i].val.trim() && curr.inside[i].folder == false) {
+				if(something.substr(4).trim() == curr.inside[i].val.trim() && curr.inside[i].folder == false) {
 					curr = curr.inside[i];
 					console.log(String(curr.val));
 					dir = dir.concat(String(curr.val), "\\");
@@ -122,7 +122,7 @@ window.onload = function() {
 			}
 			console.log(words.substr(3));
 			for(var i = 0; i < curr.inside.length; i++) {
-				if(words.substr(3).trim() == curr.inside[i].val.trim() && curr.inside[i].folder == true) {
+				if(something.substr(3).trim() == curr.inside[i].val.trim() && curr.inside[i].folder == true) {
 					curr = curr.inside[i];
 					console.log(String(curr.val));
 					dir = dir.concat(String(curr.val), "\\");
