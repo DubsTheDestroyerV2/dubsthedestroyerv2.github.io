@@ -87,7 +87,7 @@ window.onload = function() {
 		var isHelp = something.trim().startsWith(String("help").trim());
 		console.log('it is - ' + something + '\n' + isLs + ' vs ' +  isCd);
 		if(isHelp) {
-			con = con.concat("cd *dir name* - move to another directory<br />ls - see files in the current directory <br /> cat *file name* - view the text contents of a file <br />";
+			con = con.concat("cd *dir name* - move to another directory<br />ls - see files in the current directory <br /> cat *file name* - view the text contents of a file <br />");
 		}
 	    	if(isCat) {
 			var found = false;
