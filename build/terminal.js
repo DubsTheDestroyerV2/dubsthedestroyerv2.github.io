@@ -120,7 +120,7 @@ window.onload = function() {
 				dir = dir.substr(0, dir.length - dir.split('\\')[dir.split('\\').length - 2].length - 1);
 				return;
 			}
-			console.log(words.substr(3));
+			console.log(something.substr(3));
 			for(var i = 0; i < curr.inside.length; i++) {
 				if(something.substr(3).trim() == curr.inside[i].val.trim() && curr.inside[i].folder == true) {
 					curr = curr.inside[i];
