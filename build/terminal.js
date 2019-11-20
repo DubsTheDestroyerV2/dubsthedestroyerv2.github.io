@@ -91,7 +91,7 @@ window.onload = function() {
 				}
 			}
 			if(!found) {
-				con = con.concat("Not a valid File");
+				con = con.concat("Not a valid File <br/>");
 			}
 		}
 	    	
