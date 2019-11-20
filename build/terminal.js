@@ -70,7 +70,6 @@ window.onload = function() {
 	cdrive.addNode(new fnode("depression.txt", "hello there"));
 	var curr = cdrive;
  	update();
-	  
 	function update() {
 	  var output = con.concat(strt, dir, end, input.substr(0, highlight), "<div id=\"highlighted\" class=\"highlighted\">", input.charAt(highlight), "</div>", input.substr(highlight + 1, input.length));     
       if(highlight >= input.length - 1) {
@@ -85,8 +84,23 @@ window.onload = function() {
 		var isCd = something.trim().startsWith(String("cd").trim());
 		var isCat = something.trim().startsWith(String("cat").trim());
 		var isHelp = something.trim().startsWith(String("help").trim());
-		console.log('it is - ' + something + '\n' + isLs + ' vs ' +  isCd);
-		if(isHelp) {
+		var isDotS = something.trim().startsWith(String("./").trim());
+	    	console.log('it is - ' + something + '\n' + isLs + ' vs ' +  isCd);
+		if(isDotS) {
+			var found = false;
+			for(var i = 0; i < curr.inside.length; i++) {
+				if(something.substr(3).trim() == curr.inside[i].val.trim() && curr.inside[i].folder == false) {
+					if(typeof(dirr.inside[i].inside(con)) == 'function') {
+						con = durr.inside[i].inside(con);
+						found = true;
+						break;
+					}
+				}
+			}
+			if(!found) {
+				con = con.concat("Not a valid File <br/>");
+			}	
+		} else if(isHelp) {
 			con = con.concat("cd *dir name* - move to another directory<br />ls - see files in the current directory <br /> cat *file name* - view the text contents of a file <br />");
 		}
 	    	if(isCat) {
