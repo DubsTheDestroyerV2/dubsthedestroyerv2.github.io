@@ -83,10 +83,7 @@ window.onload = function() {
 	    	if(isCat) {
 			for(var i = 0; i < curr.inside.length; i++) {
 				if(something.substr(4).trim() == curr.inside[i].val.trim() && curr.inside[i].folder == false) {
-					curr = curr.inside[i];
-					console.log(String(curr.val));
-					dir = dir.concat(String(curr.val), "\\");
-					found = true;
+					con = con.concat(curr.inside[i].inside, "<br />");
 					break;
 				}
 			}
