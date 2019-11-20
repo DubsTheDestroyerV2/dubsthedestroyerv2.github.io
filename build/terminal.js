@@ -76,10 +76,25 @@ window.onload = function() {
 		var something = String(sendin).trim();
 		var isLs = something.trim() === String("ls");
 		var isCd = something.trim().startsWith(String("cd").trim());
-		
+		var isCat = something.trim().startsWith(String("cat").trim());
 		
 		console.log('it is - ' + something + '\n' + isLs + ' vs ' +  isCd);
 		
+	    	if(isCat) {
+			for(var i = 0; i < curr.inside.length; i++) {
+				if(words.substr(words.indexOf('cat ') + 4).trim() === curr.inside[i].val.trim() && curr.inside[i].folder == true) {
+					curr = curr.inside[i];
+					console.log(String(curr.val));
+					dir = dir.concat(String(curr.val), "\\");
+					found = true;
+					break;
+				}
+			}
+			if(!found) {
+				con = con.concat("Not a valid File");
+			}
+		}
+	    	
 		if(isLs) {
 			console.log('heard');
 			if(curr.inside == null) {
@@ -106,7 +121,7 @@ window.onload = function() {
 				return;
 			}
 			for(var i = 0; i < curr.inside.length; i++) {
-				if(words[1].trim() === curr.inside[i].val.trim() && curr.inside[i].folder == true) {
+				if(words.substr(words.indexOf('cd ') + 3).trim() === curr.inside[i].val.trim() && curr.inside[i].folder == true) {
 					curr = curr.inside[i];
 					console.log(String(curr.val));
 					dir = dir.concat(String(curr.val), "\\");
