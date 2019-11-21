@@ -151,7 +151,7 @@ window.onload = function() {
             if (isDotS) {
                 var found = false;
                 for (var i = 0; i < curr.inside.length; i++) {
-                    if (something.substr(something.indexOf(' ') + 1).trim() == curr.inside[i].val.trim() && curr.inside[i].folder == false) {
+                    if (something.substr(4).trim() == curr.inside[i].val.trim() && curr.inside[i].folder == false) {
                         found = true;
                         if (typeof(curr.inside[i].inside) == 'function') {
                             concpy = con;
