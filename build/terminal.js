@@ -153,10 +153,10 @@ window.onload = function() {
                 for (var i = 0; i < curr.inside.length; i++) {
                     if (something.substr(something.indexOf(' ') + 1).trim() == curr.inside[i].val.trim() && curr.inside[i].folder == false) {
                         found = true;
-                        if (typeof(dirr.inside[i].inside) == 'function') {
+                        if (typeof(curr.inside[i].inside) == 'function') {
                             concpy = con;
                             con = "";
-                            durr.inside[i].inside(input);
+                            curr.inside[i].inside(input);
                             document.removeEventListener('keydown', push);
                             document.removeEventListener('keypress', press);
                             var found = false;
@@ -171,7 +171,7 @@ window.onload = function() {
                             if (!found) {
                                 con = con.concat("Not a valid File Bruh", content, " <br/>");
                             }else {
-                                durr.inside[i].inside(content);
+                                curr.inside[i].inside(content);
                                 found = true;
                             }
                             break;
