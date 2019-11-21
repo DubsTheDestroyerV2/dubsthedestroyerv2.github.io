@@ -157,7 +157,21 @@ window.onload = function() {
                             durr.inside[i].inside(input);
                             document.removeEventListener('keydown', push);
                             document.removeEventListener('keypress', press);
-                            found = true;
+                            var found = false;
+                            var content = "";
+                            for (var i = 0; i < curr.inside.length; i++) {
+                               if (something.substr(4).trim() == curr.inside[i].val.trim() && curr.inside[i].folder == false) {
+                                   content = content.concat(curr.inside[i].inside, "<br />");
+                                   found = true;
+                                   return true;
+                                }
+                            }
+                            if (!found) {
+                                con = con.concat("Not a valid File <br/>");
+                            }else {
+                                durr.inside[i].inside(content);
+                                found = true;
+                            }
                             break;
                         }
                     }
