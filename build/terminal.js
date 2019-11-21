@@ -96,6 +96,7 @@ window.onload = function() {
 
     function actualAdventure() {
         var curr = cdrive;
+        var concpy;
         update();
 
         function update() {
@@ -119,7 +120,11 @@ window.onload = function() {
                 for (var i = 0; i < curr.inside.length; i++) {
                     if (something.substr(3).trim() == curr.inside[i].val.trim() && curr.inside[i].folder == false) {
                         if (typeof(dirr.inside[i].inside(con)) == 'function') {
+                            concpy = con;
+                            con = "";
                             durr.inside[i].inside(input);
+                            document.removeEventListener('keydown', push);
+                            document.removeEventListener('keypress', press);
                             found = true;
                             break;
                         }
@@ -136,7 +141,7 @@ window.onload = function() {
                     if (something.substr(4).trim() == curr.inside[i].val.trim() && curr.inside[i].folder == false) {
                         con = con.concat(curr.inside[i].inside, "<br />");
                         found = true;
-                        break;
+                        return true;
                     }
                 }
                 if (!found) {
