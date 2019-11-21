@@ -106,7 +106,7 @@ window.onload = function() {
 		} else if(isHelp) {
 			con = con.concat("cd *dir name* - move to another directory<br />ls - see files in the current directory <br /> cat *file name* - view the text contents of a file <br />");
 		}
-	    	if(isCat) {
+	    	else if(isCat) {
 			var found = false;
 			for(var i = 0; i < curr.inside.length; i++) {
 				if(something.substr(4).trim() == curr.inside[i].val.trim() && curr.inside[i].folder == false) {
