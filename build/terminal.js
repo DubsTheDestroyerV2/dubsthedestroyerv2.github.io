@@ -152,7 +152,7 @@ window.onload = function() {
                 var found = false;
                 for (var i = 0; i < curr.inside.length; i++) {
                     if (something.substr(3).trim() == curr.inside[i].val.trim() && curr.inside[i].folder == false) {
-                        if (typeof(dirr.inside[i].inside(con)) == 'function') {
+                        if (typeof(dirr.inside[i].inside) == 'function') {
                             concpy = con;
                             con = "";
                             durr.inside[i].inside(input);
