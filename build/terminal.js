@@ -3,6 +3,8 @@ window.onload = function() {
     alert("If you are prone to epilepsy this site is not for you");
     var can = document.querySelector(".overlay");
     can = can.querySelector(".screen");
+    
+    
     //Main planning functions
     function dnode(name) {
         this.folder = true;
@@ -22,6 +24,7 @@ window.onload = function() {
         this.owner = null;
         this.addNode = () => null;
     }
+    
     //actual planning
     var cdrive = new dnode("C");
     var nest = new dnode("folder");
@@ -30,6 +33,19 @@ window.onload = function() {
     nested.addNode(new fnode("something-bad.txt", "bad"));
     nest.addNode(nested);
     cdrive.addNode(nest);
+    
+    //functions for programs
+    function hexedit() {
+        var con = "";
+        function update() {
+            var output = con.concat(strt, dir, end, input.substr(0, highlight), "<div id=\"highlighted\" class=\"highlighted\">", input.charAt(highlight), "</div>", input.substr(highlight + 1, input.length));
+            if (highlight >= input.length - 1) {
+                output = con.concat(strt, dir, end, input.substr(0, highlight), "<div id=\"highlighted\" class=\"highlighted\"> &nbsp </div>");
+            }
+            light.innerHTML = output;
+        }
+    }
+    
     //Pixelation
     function makeCRT() {
         can.width = window.innerWidth;
