@@ -8,6 +8,7 @@ function dnode(name) {
 	this.folder = true;
 	this.val = name;
 	this.inside = [];
+	this.owner = null;
 	this.addNode = function (node) {
 		node.owner = this;
 		this.inside.push(node);
@@ -17,6 +18,7 @@ function dnode(name) {
   	this.val = val;
 	this.inside = inside;
 	this.folder = false;
+	this.owner = null;
 	this.addNode = ()=>null;
   }
   //actual planning
