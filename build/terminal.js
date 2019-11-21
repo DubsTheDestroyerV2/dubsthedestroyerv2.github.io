@@ -246,7 +246,7 @@ window.onload = function() {
    }
 
    document.addEventListener('keydown', push);
-   document.addEventListener('keypress' press);
+   document.addEventListener('keypress', press);
 }
 
 var i = -1;
