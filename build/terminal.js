@@ -66,7 +66,10 @@ window.onload = function() {
   var con = "RoveOS [Version 01.0.00000.000]<br/>(c) NASA (Who Would be Lost Without Jack Trevor).  All Rights Reserved<br /> <br />";
   function actualAdventure() {
 	var cdrive = new dnode("C");
-	cdrive.addNode(new dnode("folder"));
+	var nest = new dnode("folder");
+	var nested = new dnode("inside a folder");
+	nest.addNode(nested);
+	cdrive.addNode();
 	cdrive.addNode(new fnode("depression.txt", "hello there"));
 	var curr = cdrive;
  	update();
