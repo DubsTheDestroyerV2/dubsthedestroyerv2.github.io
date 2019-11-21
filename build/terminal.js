@@ -178,7 +178,7 @@ window.onload = function() {
                     }
                 }
                 if (!found) {
-                    con = con.concat("Not a valid File <br/>");
+                    con = con.concat("Not a valid File Brother <br />");
                 }
             } else if (isHelp) {
                 con = con.concat("cd *dir name* - move to another directory<br />ls - see files in the current directory <br /> cat *file name* - view the text contents of a file <br />");
