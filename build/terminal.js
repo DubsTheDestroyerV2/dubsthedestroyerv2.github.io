@@ -161,14 +161,14 @@ window.onload = function() {
                             var found = false;
                             var content = "";
                             for (var i = 0; i < curr.inside.length; i++) {
-                               if (something.substr(4).trim() == curr.inside[i].val.trim() && curr.inside[i].folder == false) {
+                               if (something.substr(something.indexOf(' ') + 1).trim() == curr.inside[i].val.trim() && curr.inside[i].folder == false) {
                                    content = content.concat(curr.inside[i].inside, "<br />");
                                    found = true;
                                    return true;
                                 }
                             }
                             if (!found) {
-                                con = con.concat("Not a valid File <br/>");
+                                con = con.concat("Not a valid File Bruh", content, " <br/>");
                             }else {
                                 durr.inside[i].inside(content);
                                 found = true;
