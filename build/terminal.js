@@ -222,7 +222,7 @@ window.onload = function() {
                 if (event.keyCode == 39)
                     if (highlight < input.length) highlight++;
                 update();
-            });
+            };
     }
 
     function press(event) {
