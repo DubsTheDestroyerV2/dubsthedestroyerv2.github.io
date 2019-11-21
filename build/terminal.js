@@ -242,7 +242,7 @@ window.onload = function() {
             highlight++;
             input = input.concat(String.fromCharCode(event.keyCode));
             update();
-        })
+        }
    }
 
    document.addEventListener('keydown', push);
