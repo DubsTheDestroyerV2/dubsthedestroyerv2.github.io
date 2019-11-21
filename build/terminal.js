@@ -91,9 +91,6 @@ function dnode(name) {
   var highlight = 0;
   var con = "RoveOS [Version 01.0.00000.000]<br/>(c) NASA (Who Would be Lost Without Jack Trevor).  All Rights Reserved<br /> <br />";
   function actualAdventure() {
-	nest.addNode(nested);
-	cdrive.addNode();
-	cdrive.addNode(new fnode("depression.txt", "hello there"));
 	var curr = cdrive;
  	update();
 	function update() {
