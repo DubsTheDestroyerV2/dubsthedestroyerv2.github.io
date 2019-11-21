@@ -35,12 +35,28 @@ window.onload = function() {
     cdrive.addNode(nest);
     
     //functions for programs
-    function hexedit() {
-        var con = "";
+    function hexedit(contents) {
+        var con = contents;
+        update();
+        
+        
+        function push(event) {
+            if(event.keyCode == 37) {
+                con=concpy;
+                document.removeEventListener('keypress', press);
+                document.removeEventListener('keypush', push);
+                actualAdventure();
+            }
+        }
+        function press(event) {
+            con = con.concat(String.fromCharCode(event.keyCode));
+            update();
+        }
         function update() {
-            var output = con.concat(strt, dir, end, input.substr(0, highlight), "<div id=\"highlighted\" class=\"highlighted\">", input.charAt(highlight), "</div>", input.substr(highlight + 1, input.length));
-            if (highlight >= input.length - 1) {
-                output = con.concat(strt, dir, end, input.substr(0, highlight), "<div id=\"highlighted\" class=\"highlighted\"> &nbsp </div>");
+            var output = "";
+            var i;
+            for(i = 0; i < con.length; i+=2) {
+                output.concat(con.charAt(i), con.charAt(i + 1), " &nbsp &nbsp ");
             }
             light.innerHTML = output;
         }
@@ -105,6 +121,7 @@ window.onload = function() {
     var light = document.getElementById('light');
     var strt = "C:\\";
     var dir = "";
+    var concpy;
     var end = "\> ";
     var input = "";
     var highlight = 0;
@@ -112,7 +129,6 @@ window.onload = function() {
 
     function actualAdventure() {
         var curr = cdrive;
-        var concpy;
         update();
 
         function update() {
