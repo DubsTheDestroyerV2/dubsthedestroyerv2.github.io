@@ -23,9 +23,9 @@ function dnode(name) {
   var cdrive = new dnode("C");
   var nest = new dnode("folder");
   var nested = new dnode("inside a folder");
-  nest.addNode(nested);
   nested.addNode(new fnode("something-cool.txt", "cool"));
   nested.addNode(new fnode("something-bad.txt", "bad"));
+  nest.addNode(nested);
   cdrive.addNode(nest);
 //Pixelation
   function makeCRT() {
