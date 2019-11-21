@@ -3,6 +3,30 @@ window.onload = function() {
   alert("If you are prone to epilepsy this site is not for you");
   var can = document.querySelector(".overlay");
   can = can.querySelector(".screen");
+//Main planning functions
+function dnode(name) {
+	this.folder = true;
+	this.val = name;
+	this.inside = [];
+	this.addNode = function (node) {
+		node.owner = this;
+		this.inside.push(node);
+	}
+  }
+  function fnode(val, inside) {
+  	this.val = val;
+	this.inside = inside;
+	this.folder = false;
+	this.addNode = ()=>null;
+  }
+  //actual planning
+  var cdrive = new dnode("C");
+  var nest = new dnode("folder");
+  var nested = new dnode("inside a folder");
+  nest.addNode(nested);
+  nested.addNode(new fnode("something-cool.txt", "cool"));
+  nested.addNode(new fnode("something-bad.txt", "bad"));
+  cdrive.addNode(nest);
 //Pixelation
   function makeCRT() {
     can.width = window.innerWidth;
@@ -65,9 +89,6 @@ window.onload = function() {
   var highlight = 0;
   var con = "RoveOS [Version 01.0.00000.000]<br/>(c) NASA (Who Would be Lost Without Jack Trevor).  All Rights Reserved<br /> <br />";
   function actualAdventure() {
-	var cdrive = new dnode("C");
-	var nest = new dnode("folder");
-	var nested = new dnode("inside a folder");
 	nest.addNode(nested);
 	cdrive.addNode();
 	cdrive.addNode(new fnode("depression.txt", "hello there"));
