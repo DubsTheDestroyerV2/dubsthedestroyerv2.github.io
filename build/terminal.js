@@ -58,7 +58,7 @@ window.onload = function() {
             var output = "";
             var i;
             for(i = 0; i < con.length; i++) {
-                var output = output.concat((highlighted == i) ? "<div id="highlighed">" : "", con.charCodeAt(i).toString(16), (highlighted == i) ? "</div>" : "", " &nbsp ");
+                output = output.concat((highlighted == i) ? "<div id="highlighed">" : "", con.charCodeAt(i).toString(16), (highlighted == i) ? "</div>" : "", " &nbsp ");
             }
             light.innerHTML = output;
         }
