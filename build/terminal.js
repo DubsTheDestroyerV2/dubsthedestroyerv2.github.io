@@ -37,6 +37,7 @@ window.onload = function() {
     
     //functions for programs
     function hexedit(contents) {
+        var highlighted = 0;
         var con = contents;
         update();
         
@@ -57,7 +58,7 @@ window.onload = function() {
             var output = "";
             var i;
             for(i = 0; i < con.length; i++) {
-                var output = output.concat(con.charCodeAt(i).toString(16), " &nbsp ");
+                var output = output.concat((highlighted == i) ? "<div id="highlighed">" : "", con.charCodeAt(i).toString(16), (highlighted == i) ? "</div>" : "", " &nbsp ");
             }
             light.innerHTML = output;
         }
