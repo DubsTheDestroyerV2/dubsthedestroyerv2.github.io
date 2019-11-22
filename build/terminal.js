@@ -56,8 +56,8 @@ window.onload = function() {
         function update() {
             var output = "";
             var i;
-            for(i = 0; i < con.length; i+=2) {
-                var output = output.concat(con.charAt(i), con.charAt(i + 1), " &nbsp ");
+            for(i = 0; i < con.length; i++) {
+                var output = output.concat(con.charCodeAt(i).toString(16), " &nbsp ");
             }
             light.innerHTML = output;
         }
