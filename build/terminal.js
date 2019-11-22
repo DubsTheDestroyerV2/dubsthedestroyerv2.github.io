@@ -149,6 +149,20 @@ window.onload = function() {
             var isHelp = something.trim().startsWith(String("help").trim());
             var isDotS = something.trim().startsWith(String("./").trim());
             console.log('it is - ' + something + '\n' + isLs + ' vs ' + isCd);
+            function pathToNode(path) {
+                var targetNode = curr;
+                use.split('\\' | '/').forEach((possibleDir, index) => {
+                    var found = false;
+                    if(possibleDir == '..') {
+                        targetNode = targetNode.owner;
+                        return;
+                    }                 
+                    targetNode.inside.forEach((inner) => {
+                        if(inner.val.trim() == possibleDir.trim())
+                            targetNode = inner;
+                    });
+                });
+            }
             if (isDotS) {
                 var found = false;
                 for (var i = 0; i < curr.inside.length; i++) {
@@ -213,10 +227,7 @@ window.onload = function() {
                 var words = something.split(' ');
                 var found = false;
                 var use = something.substr(3);
-                something.split('\\').forEach((possibleDir) => {
-                    var found = false;
-                    
-                });
+                
                 console.log(something.substr(3));
                 for (var i = 0; i < curr.inside.length; i++) {
                     if (something.substr(3).trim() == curr.inside[i].val.trim() && curr.inside[i].folder == true) {
@@ -280,8 +291,6 @@ window.onload = function() {
     }
 
     function press(event) {
-        {
-
             if (event.keyCode == 8) {
                 event.preventDefault();
                 if (input.length > 0) {
