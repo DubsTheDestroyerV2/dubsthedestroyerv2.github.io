@@ -270,6 +270,7 @@ window.onload = function() {
                     con = con.concat(strt, dir, end, input, "<br />");
                     if(processCmd(input)) {
                         light.innerHtml = "";
+                        return;
                     }
                     input = "";
                 }
