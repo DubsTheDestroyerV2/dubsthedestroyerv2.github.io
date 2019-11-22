@@ -157,9 +157,9 @@ window.onload = function() {
                     if (typeof(curr.inside[i].inside) == 'function') {
                             var foundtwo = false;
                             var content = "";
-                            for (var i = 0; i < curr.inside.length; i++) {
-                               if (something.substr(something.indexOf(' ') + 1).trim() == curr.inside[i].val.trim() && curr.inside[i].folder == false) {
-                                   content = curr.inside[i].inside;
+                            for (var i2 = 0; i2 < curr.inside.length; i2++) {
+                               if (something.substr(something.indexOf(' ') + 1).trim() == curr.inside[i2].val.trim() && curr.inside[i2].folder == false) {
+                                   content = curr.inside[i2].inside;
                                    concpy = con;
                                    con = "";
                                    document.removeEventListener('keydown', push);
