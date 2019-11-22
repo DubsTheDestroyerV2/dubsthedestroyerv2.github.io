@@ -57,7 +57,7 @@ window.onload = function() {
             var output = "";
             var i;
             for(i = 0; i < con.length; i+=2) {
-                output.concat(con.charAt(i), con.charAt(i + 1), " &nbsp &nbsp ");
+                var output = output.concat(con.charAt(i), con.charAt(i + 1), " &nbsp &nbsp ");
             }
             light.innerHTML = output;
         }
@@ -154,18 +154,18 @@ window.onload = function() {
                     console.log(something.substr(2, something.indexOf(' ') - 2).trim());
                     if (something.substr(2, something.indexOf(' ') - 2).trim() == curr.inside[i].val.trim() && curr.inside[i].folder == false) {
                         found = true;
-                        if (typeof(curr.inside[i].inside) == 'function') {
-                            concpy = con;
-                            con = "";
-                            curr.inside[i].inside(input);
-                            document.removeEventListener('keydown', push);
-                            document.removeEventListener('keypress', press);
-                            var found = false;
+                    if (typeof(curr.inside[i].inside) == 'function') {
+                            var foundtwo = false;
                             var content = "";
                             for (var i = 0; i < curr.inside.length; i++) {
                                if (something.substr(something.indexOf(' ') + 1).trim() == curr.inside[i].val.trim() && curr.inside[i].folder == false) {
-                                   content = content.concat(curr.inside[i].inside, "<br />");
-                                   found = true;
+                                   content = curr.inside[i].inside;
+                                   concpy = con;
+                                   con = "";
+                                   document.removeEventListener('keydown', push);
+                                   document.removeEventListener('keypress', press);
+                                   foundtwo = true;
+                                   curr.inside[i].inside(content);
                                    return true;
                                 }
                             }
