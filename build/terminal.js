@@ -151,6 +151,7 @@ window.onload = function() {
             if (isDotS) {
                 var found = false;
                 for (var i = 0; i < curr.inside.length; i++) {
+                    console.log(something.substr(0, something.indexOf(' ')).trim());
                     if (something.substr(0, something.indexOf(' ')).trim() == curr.inside[i].val.trim() && curr.inside[i].folder == false) {
                         found = true;
                         if (typeof(curr.inside[i].inside) == 'function') {
