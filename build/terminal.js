@@ -151,8 +151,8 @@ window.onload = function() {
             if (isDotS) {
                 var found = false;
                 for (var i = 0; i < curr.inside.length; i++) {
-                    console.log(something.substr(2, something.indexOf(' ')).trim());
-                    if (something.substr(2, something.indexOf(' ')).trim() == curr.inside[i].val.trim() && curr.inside[i].folder == false) {
+                    console.log(something.substr(2, something.indexOf(' ') - 2).trim());
+                    if (something.substr(2, something.indexOf(' ') - 2).trim() == curr.inside[i].val.trim() && curr.inside[i].folder == false) {
                         found = true;
                         if (typeof(curr.inside[i].inside) == 'function') {
                             concpy = con;
