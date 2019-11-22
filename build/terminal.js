@@ -268,7 +268,9 @@ window.onload = function() {
                 }
                 if (event.keyCode == 13) {
                     con = con.concat(strt, dir, end, input, "<br />");
-                    processCmd(input);
+                    if(processCmd(input)) {
+                        light.innerHtml = "";
+                    }
                     input = "";
                 }
                 if (event.keyCode == 37)
