@@ -208,19 +208,15 @@ window.onload = function() {
                     con = con.concat((!curr.inside[i].folder) ? " <div id=\"green\" class=\"green\"> " : " <div id=\"blue\" class=\"blue\"> ", curr.inside[i].val, "</div><br />");
                 }
             } else if (isCd) {
+                var targetNode = curr;
                 console.log("cd");
                 var words = something.split(' ');
                 var found = false;
-                if (words[1].trim() == "..") {
-                    console.log("functioniong");
-                    if (curr.owner == null) {
-                        con = con.concat("Not a valid Directory");
-                        return;
-                    }
-                    curr = curr.owner;
-                    dir = dir.substr(0, dir.length - dir.split('\\')[dir.split('\\').length - 2].length - 1);
-                    return;
-                }
+                var use = something.substr(3);
+                something.split('\\').forEach((possibleDir) => {
+                    var found = false;
+                    
+                });
                 console.log(something.substr(3));
                 for (var i = 0; i < curr.inside.length; i++) {
                     if (something.substr(3).trim() == curr.inside[i].val.trim() && curr.inside[i].folder == true) {
