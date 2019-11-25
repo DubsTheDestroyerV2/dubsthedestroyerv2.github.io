@@ -57,8 +57,9 @@ window.onload = function() {
             }
         }
         function press(event) {
-            con = con.concat(String.fromCharCode(event.keyCode));
-            update();
+            console.log("its pressed");
+            //con = con.concat(String.fromCharCode(event.keyCode));
+            //update();
         }
         function update() {
             var output = "";
