@@ -69,6 +69,8 @@ window.onload = function() {
             }
             light.innerHTML = output;
         }
+        document.addEventListener('keydown', push);
+        document.addEventListener('keypress', press);
     }
     
     //Pixelation
