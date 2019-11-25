@@ -65,7 +65,7 @@ window.onload = function() {
         function update() {
             var output = "";
             var i;
-            for(i = 0; i < con.length; i+=2) {
+            for(i = 0; i < con.length; i++) {
                 output = output.concat((highlighted == i) ? "<div id=\"highlighted\" class=\"highlighted\">" : "", (con.charCodeAt(i) >> 8).toString(16), (highlighted == i) ? "</div>" : "");
                 output = output.concat((highlighted == i+ 1) ? "<div id=\"highlighted\" class=\"highlighted\">" : "", (con.charCodeAt(i) & 0xf).toString(16), (highlighted == i + 1) ? "</div>" : "", " &nbsp ");
             }
