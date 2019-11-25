@@ -243,7 +243,6 @@ window.onload = function() {
                     else if(element.trim() == '.'.trim() && index == 0) targetNode = curr;
                     else if(element.trim() == 'C:'.trim() && index == 0) {targetNode = cdrive; dir="";}
                     else {
-                        var found = false;
                         targetNode.inside.forEach((nde, dex) => {
                             if(element.trim() == nde.val.trim()) {
                                 found = true;
