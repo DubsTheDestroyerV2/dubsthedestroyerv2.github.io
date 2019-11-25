@@ -237,18 +237,25 @@ window.onload = function() {
                 console.log("cd");
                 var words = something.split(' ');
                 var found = false;
-                var use = something.substr(3);
-                
-                console.log(something.substr(3));
-                for (var i = 0; i < curr.inside.length; i++) {
-                    if (something.substr(3).trim() == curr.inside[i].val.trim() && curr.inside[i].folder == true) {
-                        curr = curr.inside[i];
-                        console.log(String(curr.val));
-                        dir = dir.concat(String(curr.val), "\\");
-                        found = true;
-                        break;
+                var use = something.substr(3).split('\\' | '/');
+                use.forEach((element, index) => {
+                    if(element.trim() == '..'.trim()) {targetNode = targetNode.owner; dir = dir.substr(0, dir.substr(0, dir.length - 1).lastIndexOf('\\' | '/'));
+                    else if(element.trim() == '.'.trim() && index == 0) targetNode = curr;
+                    else if(element.trim() == 'C:'.trim() && index == 0) {targetNode = cdrive; dir="";}
+                    else {
+                        var found = false;
+                        targetNode.forEach((nde, dex) => {
+                            if(element.trim() == nde.val.trim()) {
+                                found = true;
+                                targetNode = nde;
+                                dir = dir.concat(element.trim(), '\\');
+                                return;
+                            }
+                        });    
                     }
-                }
+                });
+                console.log(something.substr(3));
+                
                 if (!found) {
                     con = con.concat("Not a valid Directory");
                 }
