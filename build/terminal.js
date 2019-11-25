@@ -49,6 +49,7 @@ window.onload = function() {
             if(event.keyCode == 39) {
                 highlighted++;
             }
+            update();
             if(event.keyCode == 27) {
                 con=concpy;
                 document.removeEventListener('keypress', press);
