@@ -304,11 +304,6 @@ window.onload = function() {
     function press(event) {
             if (event.keyCode == 8) {
                 event.preventDefault();
-                if (input.length > 0) {
-                    input = input.substr(0, highlight - 1).concat(input.substr(highlight, input.length));
-                    highlight--;
-                }
-                update();
                 return;
             }
             light.scrollTop = light.scrollHeight;
