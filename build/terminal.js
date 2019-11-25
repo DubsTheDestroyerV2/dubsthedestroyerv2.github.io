@@ -66,7 +66,7 @@ window.onload = function() {
             var output = "";
             var i;
             for(i = 0; i < con.length; i++) {
-                output = output.concat((highlighted == i * 2) ? "<div id=\"highlighted\" class=\"highlighted\">" : "", (con.charCodeAt(i) >> 8).toString(16), (highlighted == i * 2) ? "</div>" : "");
+                output = output.concat((highlighted == i * 2) ? "<div id=\"highlighted\" class=\"highlighted\">" : "", (con.charCodeAt(i) >> 4).toString(16), (highlighted == i * 2) ? "</div>" : "");
                 output = output.concat((highlighted == i * 2 + 1) ? "<div id=\"highlighted\" class=\"highlighted\">" : "", (con.charCodeAt(i) & 0xf).toString(16), (highlighted == i * 2 + 1) ? "</div>" : "", " &nbsp ");
             }
             light.innerHTML = output;
