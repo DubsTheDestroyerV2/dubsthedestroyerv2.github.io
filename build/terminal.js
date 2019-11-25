@@ -306,11 +306,9 @@ window.onload = function() {
             input = input.concat(String.fromCharCode(event.keyCode));
             update();
         }
+        document.addEventListener('keydown', push);
+        document.addEventListener('keypress', press);
    }
-
-   document.addEventListener('keydown', push);
-   document.addEventListener('keypress', press);
-}
 
 var i = -1;
 var init = "INIT <br />";
