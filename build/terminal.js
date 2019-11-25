@@ -196,7 +196,7 @@ window.onload = function() {
                                 }
                             }
                             if (!found) {
-                                con = con.concat("Not a valid File Bruh", content, " <br/>");
+                                con = con.concat("Not a valid File", content, " <br/>");
                             }else {
                                 curr.inside[i].inside(content);
                                 found = true;
@@ -206,7 +206,7 @@ window.onload = function() {
                     }
                 }
                 if (!found) {
-                    con = con.concat("Not a valid File Brother <br />");
+                    con = con.concat("Not a valid File <br />");
                 }
             } else if (isHelp) {
                 con = con.concat("cd *dir name* - move to another directory<br />ls - see files in the current directory <br /> cat *file name* - view the text contents of a file <br />");
@@ -253,6 +253,7 @@ window.onload = function() {
                         });    
                     }
                 });
+                curr = targetNode;
                 console.log(something.substr(3));
                 
                 if (!found) {
