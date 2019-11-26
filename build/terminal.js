@@ -144,7 +144,7 @@ window.onload = function() {
     function lastIndexOf(str, s1, s2) {
         var last1 = str.lastIndexOf(s1);
         var last2 = str.lastIndexOf(s2);
-        return (last1 > last2) last1 : last2;
+        return (last1 > last2) ? last1 : last2;
     }
     function actualAdventure() {
         var curr = cdrive;
