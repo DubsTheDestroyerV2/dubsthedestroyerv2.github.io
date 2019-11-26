@@ -241,7 +241,7 @@ window.onload = function() {
                 var found = false;
                 var use = something.substr(3).split('\\' | '/');
                 use.forEach((element, index) => {
-                    console.log(dir.substr(0, dir.length - 2).lastIndexOf('\\' | '/')));
+                    console.log(dir.substr(0, dir.length - 2).lastIndexOf('\\' | '/'));
                     if(element.trim() == '..'.trim()) {targetNode = targetNode.owner; dir = dir.substr(0, dir.substr(0, dir.length - 2).lastIndexOf('\\' | '/'));}
                     else if(element.trim() == '.'.trim() && index == 0) targetNode = curr;
                     else if(element.trim() == 'C:'.trim() && index == 0) {targetNode = cdrive; dir="";}
