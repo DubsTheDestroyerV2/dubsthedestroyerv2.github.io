@@ -141,7 +141,11 @@ window.onload = function() {
     var input = "";
     var highlight = 0;
     var con = "RoveOS [Version 01.0.00000.000]<br/>(c) NASA (Who Would be Lost Without Jack Trevor).  All Rights Reserved<br /> <br />";
-
+    function lastIndexOf(str, s1, s2) {
+        var last1 = str.lastIndexOf(s1);
+        var last2 = str.lastIndexOf(s2);
+        return (last1 > last2) last1 : last2;
+    }
     function actualAdventure() {
         var curr = cdrive;
         update();
@@ -241,8 +245,8 @@ window.onload = function() {
                 var found = false;
                 var use = something.substr(3).split('\\' | '/');
                 use.forEach((element, index) => {
-                    console.log(dir.substr(0, dir.substr(0, dir.length - 2).lastIndexOf('\\' | '/')));
-                    if(element.trim() == '..'.trim()) {targetNode = targetNode.owner; dir = dir.substr(0, dir.substr(0, dir.length - 2).lastIndexOf('\\' | '/'));}
+                    console.log(dir.substr(0, lastIndexOf(dir.substr(0, dir.length - 1), '\\', '/')));
+                    if(element.trim() == '..'.trim()) {targetNode = targetNode.owner; dir = dir.substr(0, lastIndexOf(dir.substr(0, dir.length - 2), '\\' ,'/'));}
                     else if(element.trim() == '.'.trim() && index == 0) targetNode = curr;
                     else if(element.trim() == 'C:'.trim() && index == 0) {targetNode = cdrive; dir="";}
                     else {
