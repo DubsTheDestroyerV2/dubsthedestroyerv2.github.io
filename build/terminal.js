@@ -48,7 +48,7 @@ window.onload = function() {
                     highlighted--;
             }
             if(event.keyCode == 39) {
-                if(highlighted < con.length * 2)
+                if(highlighted < con.length * 2 -1)
                     highlighted++;
             }
             update();
