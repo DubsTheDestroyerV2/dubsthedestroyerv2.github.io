@@ -243,7 +243,8 @@ window.onload = function() {
                 console.log("cd");
                 var words = something.split(' ');
                 var found = false;
-                var use = something.substr(3).split('\\' | '/');
+                something = something.replace('/', '\\');
+                var use = something.substr(3).split('\\');
                 use.forEach((element, index) => {
                     console.log(dir.substr(lastIndexOf(dir.substr(0, dir.length - 1), '\\', '/')));
                     if(element.trim() == '..'.trim()) {targetNode = targetNode.owner; dir = dir.substr(0, lastIndexOf(dir.substr(0, dir.length - 2), '\\' ,'/'));}
