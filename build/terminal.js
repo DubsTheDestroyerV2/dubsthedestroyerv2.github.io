@@ -44,10 +44,12 @@ window.onload = function() {
         
         function push(event) {
             if(event.keyCode == 37) {
-                highlighted--;
+                if(highlighted > 0)
+                    highlighted--;
             }
             if(event.keyCode == 39) {
-                highlighted++;
+                if(highlighted < con.length)
+                    highlighted++;
             }
             update();
             if(event.keyCode == 27) {
