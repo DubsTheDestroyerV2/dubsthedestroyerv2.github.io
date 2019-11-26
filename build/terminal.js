@@ -242,7 +242,7 @@ window.onload = function() {
                 var targetNode = curr;
                 console.log("cd");
                 var words = something.split(' ');
-                var found = false;
+                var found = true;
                 something = something.replace('/', '\\');
                 var use = something.substr(3).split('\\');
                 use.forEach((element, index) => {
@@ -251,20 +251,22 @@ window.onload = function() {
                     else if(element.trim() == '.'.trim() && index == 0) targetNode = curr;
                     else if(element.trim() == 'C:'.trim() && index == 0) {targetNode = cdrive; dir="";}
                     else {
+                        var found2 = false;
                         targetNode.inside.forEach((nde, dex) => {
                             if(element.trim() == nde.val.trim()) {
-                                found = true;
                                 targetNode = nde;
                                 dir = dir.concat(element.trim(), '\\');
+                                found2 = true;
                             }
-                        });    
+                        });
+                        if(!found2) found = false;
                     }
                 });
                 curr = targetNode;
                 console.log(something.substr(3));
                 
                 if (!found) {
-                    con = con.concat("Not a valid Directory");
+                    con = con.concat("Not a valid Directory <br />");
                 }
             } else {
                 if (input.length > 1)
