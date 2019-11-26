@@ -29,7 +29,7 @@ window.onload = function() {
     var cdrive = new dnode("C");
     var nest = new dnode("folder");
     var nested = new dnode("inside a folder");
-    nested.addNode(new fnode("something-cool.txt", "cool"));
+    nested.addNode(new fnode("something-cool.txt", "cool beans"));
     nested.addNode(new fnode("something-bad.txt", "bad"));
     nested.addNode(new fnode("hexedit.exe", hexedit));
     nest.addNode(nested);
