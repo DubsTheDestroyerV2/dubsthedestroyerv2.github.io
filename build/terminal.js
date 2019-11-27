@@ -262,7 +262,7 @@ window.onload = function() {
                         if(!found2) found = false;
                     }
                 });
-                if(found2)
+                if(found)
                 curr = targetNode;
                 console.log(something.substr(3));
                 
