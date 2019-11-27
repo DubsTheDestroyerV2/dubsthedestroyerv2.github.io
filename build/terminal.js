@@ -319,10 +319,6 @@ window.onload = function() {
     }
 
     function press(event) {
-            if (event.keyCode == 8) {
-                event.preventDefault();
-                return;
-            }
             light.scrollTop = light.scrollHeight;
 
             highlight++;
