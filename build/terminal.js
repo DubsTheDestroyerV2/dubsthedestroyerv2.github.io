@@ -278,12 +278,12 @@ window.onload = function() {
         function push(event) {
             {
                 if (event.keyCode == 8) {
-                    event.preventDefault();
                     if (input.length > 0) {
                         input = input.substr(0, highlight - 1).concat(input.substr(highlight, input.length));
                         highlight--;
                     }
                     update();
+                    event.preventDefault();
                     return;
                 }
                 if (event.keyCode == 9) {
