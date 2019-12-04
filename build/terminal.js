@@ -250,6 +250,7 @@ window.onload = function() {
                     if(element.trim() == '..'.trim()) {targetNode = targetNode.owner; dir = dir.substr(0, lastIndexOf(dir.substr(0, dir.length - 2), '\\' ,'/') + 1); if(dir.length < 2) dir = "";}
                     else if(element.trim() == '.'.trim() && index == 0) targetNode = curr;
                     else if((element.trim() == 'C:'.trim() || element.trim() == ''.trim()) && index == 0) {targetNode = cdrive; dir=""; }
+                    else if(element.trim() == ''.trim()) {}
                     else {
                         var found2 = false;
                         targetNode.inside.forEach((nde, dex) => {
