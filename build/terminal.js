@@ -27,9 +27,9 @@ window.onload = function() {
     
     //actual planning
     var cdrive = new dnode("C");
-    var nest = new dnode("folder");
-    var nested = new dnode("inside a folder");
-    nested.addNode(new fnode("something-cool.txt", "cool beans"));
+    var nest = new dnode("journal");
+    var nested = new dnode("sys");
+    nested.addNode(new fnode("day-1.txt", ""));
     nested.addNode(new fnode("something-bad.txt", "bad"));
     nested.addNode(new fnode("hexedit.exe", hexedit));
     nest.addNode(nested);
