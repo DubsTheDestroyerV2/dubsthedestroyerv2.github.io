@@ -204,6 +204,7 @@ window.onload = function() {
                             if (!found) {
                                 con = con.concat("Not a valid File", content, " <br/>");
                             }else {
+                                input = "";
                                 curr.inside[i].inside(content);
                                 found = true;
                             }
@@ -263,13 +264,18 @@ window.onload = function() {
                         if(!found2) found = false;
                     }
                 });
-                if(found)
-                curr = targetNode;
+                if(found) {
+                    if(curr != targetNode) {
+                      curr = targetNode;
+                    }
+               
+                }
                 console.log(something.substr(3));
                 
                 if (!found) {
                     con = con.concat("Not a valid Directory <br />");
                 }
+                input = "";
             } else {
                 if (input.length > 1)
                     con = con.concat("Unrecognized Command.  Use \"help\" to get a list of common commands <br />");
