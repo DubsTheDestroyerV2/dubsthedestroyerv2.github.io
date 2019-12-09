@@ -245,6 +245,7 @@ window.onload = function() {
                 var found = true;
                 something = something.replace('/', '\\');
                 var use = something.substr(3).split('\\');
+                input = "";
                 use.forEach((element, index) => {
                     console.log(dir.substr(lastIndexOf(dir.substr(0, dir.length - 1), '\\', '/')));
                     if(element.trim() == '..'.trim()) {targetNode = targetNode.owner; dir = dir.substr(0, lastIndexOf(dir.substr(0, dir.length - 2), '\\' ,'/') + 1); if(dir.length < 2) dir = "";}
@@ -274,7 +275,6 @@ window.onload = function() {
                 if (!found) {
                     con = con.concat("Not a valid Directory <br />");
                 }
-                input = "";
             } else {
                 if (input.length > 1)
                     con = con.concat("Unrecognized Command.  Use \"help\" to get a list of common commands <br />");
