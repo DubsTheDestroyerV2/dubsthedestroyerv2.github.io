@@ -29,6 +29,7 @@ window.onload = function() {
     var cdrive = new dnode("C");
     var nest = new dnode("journal");
     var nested = new dnode("sys");
+    var internals = "454580924385903itui0grjgi0rjtgpoisjpigosijiogjrpfiogjsoiperjgopisrjgiopsl;jergtoi;ejasoi;tgjnoi;slerjng;oljsreogij";
     nest.addNode(new fnode("day-1.txt", "The big heads at NASA have told me that in order to make this rover interact with the other one, I simply have to change one bit to enable the code it came with to do so.  The only problem is that its really long, but I just need to turn the second fe to ff."));
     nest.addNode(new fnode("something-bad.txt", "bad"));
     nested.addNode(new fnode("hexedit.exe", hexedit));
@@ -36,6 +37,7 @@ window.onload = function() {
     cdrive.addNode(nested);
     //functions for programs
     function hexedit(contents) {
+        contents = internals;
         var highlighted = 0;
         var con = contents;
         update();
