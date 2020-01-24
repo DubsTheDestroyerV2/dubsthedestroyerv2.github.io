@@ -189,6 +189,7 @@ window.onload = function() {
                         found = true;
                     if (typeof(curr.inside[i].inside) == 'function') {
                             var foundtwo = false;
+                            found = true;
                             var content = "";
                             for (var i2 = 0; i2 < curr.inside.length; i2++) {
                                if (something.substr(something.indexOf(' ') + 1).trim() == curr.inside[i2].val.trim() && curr.inside[i2].folder == false) {
