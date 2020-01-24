@@ -203,7 +203,7 @@ window.onload = function() {
                                    return true;
                                 }
                             }
-                            if (!found) {
+                            if (found) {
                                 //con = con.concat("Not a valid File", content, " <br/>");
                                 curr.inside[i].inside(content);
                                 return true;
