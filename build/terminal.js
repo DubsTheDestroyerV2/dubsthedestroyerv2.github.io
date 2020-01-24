@@ -185,8 +185,6 @@ window.onload = function() {
                 var found = false;
                 for (var i = 0; i < curr.inside.length; i++) {
                     console.log(something.substr(2, something.indexOf(' ') - 2).trim());
-                    if (something.substr(2, something.indexOf(' ') - 2).trim() == curr.inside[i].val.trim() && curr.inside[i].folder == false) {
-                        found = true;
                     if (typeof(curr.inside[i].inside) == 'function') {
                             var foundtwo = false;
                             found = true;
@@ -203,14 +201,8 @@ window.onload = function() {
                                    return true;
                                 }
                             }
-                            if (found) {
-                                //con = con.concat("Not a valid File", content, " <br/>");
-                                curr.inside[i].inside(content);
-                                return true;
-                            }else {
-                                input = "";
-                                curr.inside[i].inside(content);
-                                found = true;
+                            if(!foundTwo) {
+                                curr.inside[i].inside(intervals);
                             }
                             break;
                         }
